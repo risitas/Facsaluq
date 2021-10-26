@@ -1,0 +1,7 @@
+{
+  "name": "Facsaluq a un clic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
