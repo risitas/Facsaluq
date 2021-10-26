@@ -3,7 +3,7 @@
   "index": "/index.html",
   "assetGroups": [
     {
-      "name": "app",
+      "name": "Facsaluq a un clic",
       "installMode": "prefetch",
       "resources": {
         "files": [
