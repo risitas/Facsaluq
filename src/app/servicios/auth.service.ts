@@ -4,23 +4,21 @@ import { promise } from 'protractor';
 import { enableProdMode } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
+
 export class AuthService {
 
-  constructor(private aFauth: AngularFireAuth) { }
+    constructor(private afauth: AngularFireAuth) { }
 
-  login(email: string, password: string) {
+    login(email: string, password: string) {
 
-    return new Promise((resolve, rejected) => {
+        return new Promise((resolve, rejected) => {
 
-      this.aFauth.signInWithEmailAndPassword(email, password).then(user => {
-        console.log('Esta logueado: ' + user);
-        resolve(user);
-      }).catch(err => rejected(err));
+            this.afauth.signInWithEmailAndPassword(email, password).then(user => {
+                resolve(user);
+            }).catch(err => rejected(err));
 
-    });
-
-
-  }
+        });
+    }
 }
