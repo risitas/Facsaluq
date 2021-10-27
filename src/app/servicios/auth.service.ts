@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { promise } from 'protractor';
 import { enableProdMode } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
     providedIn: 'root'
@@ -9,7 +10,7 @@ import { enableProdMode } from '@angular/core';
 
 export class AuthService {
 
-    constructor(private afauth: AngularFireAuth) { }
+    constructor(private afauth: AngularFireAuth, private router: Router) { }
 
     login(email: string, password: string) {
 
@@ -19,6 +20,11 @@ export class AuthService {
                 resolve(user);
             }).catch(err => rejected(err));
 
+        });
+    }
+    logout() {
+        this.afauth.signOut().then(() => {
+            this.router.navigate(['/login']);
         });
     }
 }
