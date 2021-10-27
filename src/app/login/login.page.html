@@ -8,16 +8,19 @@
 
   <img class="icon" src="../assets/icon/login.png" alt="">
 
+  <div class="padre">
 
-  <ion-item>
-    <ion-label position="floating">Correo electronico</ion-label>
-    <ion-input type="text" [(ngModel)]="email" name="password"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo electronico</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="password"></ion-input>
+      </ion-item>
+   
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+    </div>
 
-  <ion-item>
-    <ion-label position="floating">Contraseña</ion-label>
-    <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
-  </ion-item>
 
   <ion-button (click)="onSubmitLogin()" expand="block">Ingresar</ion-button>
 
