@@ -25,12 +25,13 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-.icon{
+.icon {
+    max-width: 30%;
+    height: auto;
     display: block;
-    margin-left:auto;
-    margin-right:auto;
-    width:50%;
-}
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 .center {
     text-align: center;
