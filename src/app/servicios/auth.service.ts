@@ -13,19 +13,13 @@ export class AuthService {
 
     login(email: string, password: string) {
       return new Promise((resolve, rejected) => {
-      this.afauth.signInWithEmailAndPassword(email, password).then(user => {
-        console.log('Esta logueado: ' + user);
-        resolve(user);
-      }).catch(err => rejected(err));
+        this.afauth.signInWithEmailAndPassword(email, password).then(user => {
+          console.log('Esta logueado: ' + user);
+          resolve(user);
+        }).catch(err => rejected(err));
 
-    });
+      });
 
-
-<<<<<<< HEAD
-  }
-}
-=======
-        });
     }
     logout() {
         this.afauth.signOut().then(() => {
@@ -33,4 +27,3 @@ export class AuthService {
         });
     }
 }
->>>>>>> origin
