@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="secondary">
+  <ion-toolbar color="primary">
     <ion-title class="center">Registro</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -8,22 +8,26 @@
   <img class="icon" src="assets/icon/registro.png" alt="">
   <div class="padre">
     <ion-item>
-      <ion-label position="floating" > Nombres </ion-label>
-      <ion-input type="text"  name="nombres"></ion-input>
+      <ion-label position="floating"> Nombres </ion-label>
+      <ion-input type="text" [(ngModel)]="nombres" name="nombres"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating" > Apellidos </ion-label>
-      <ion-input type="text"  name="apellidos"></ion-input>
+      <ion-label position="floating"> Apellidos </ion-label>
+      <ion-input type="text" [(ngModel)]="apellidos" name="apellidos"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating" > Correo electrónico </ion-label>
-      <ion-input type="text"  name="email"></ion-input>
+      <ion-label position="floating"> Correo electrónico </ion-label>
+      <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating"> Contraseña </ion-label>
-      <ion-input  type="password" name="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
     </ion-item>
-</div>
-<ion-button color="secondary" expand="block">Registrar</ion-button>
-<p class="center" routerLink="/login">Ya estoy registrado</p>
+    <ion-item>
+      <ion-label position="floating"> Confirmar contraseña </ion-label>
+      <ion-input type="password" [(ngModel)]="reppassword" name="reppassword"></ion-input>
+    </ion-item>
+  </div>
+  <ion-button (click)="onSubmitRegister()"  expand="block">Registrar</ion-button>
+  <ion-button routerLink="/login" expand="block">Ya tengo cuenta</ion-button>
 </ion-content>

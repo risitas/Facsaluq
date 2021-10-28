@@ -14,7 +14,7 @@ import { firebaseConfig } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +24,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     // Register the ServiceWorker as soon as the app is stable
     // or after 30 seconds (whichever comes first).
     registrationStrategy: 'registerWhenStable:30000'
-  }), AngularFireModule.initializeApp(firebaseConfig), AngularFireAuthModule],
+  }), AngularFireModule.initializeApp(firebaseConfig), AngularFireAuthModule,AngularFirestoreModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

@@ -21,4 +21,6 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/tableroMando']);
     }).catch(err => alert('los datos son incorrectos o no existe el usuario'));
   }
+
+ 
 }
