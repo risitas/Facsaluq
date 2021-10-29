@@ -7,7 +7,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 
-const swal = require('sweetalert2')
+const swal = require('sweetalert2');
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +34,7 @@ export class AuthService {
         text: 'Le faltan campos por llenar.',
         icon: 'error',
         confirmButtonText: 'Confirmar'
-      })
+      });
     }
 
   }
@@ -52,15 +52,15 @@ export class AuthService {
 
   register(email: string, password: string, name: string, lastname: string) {
 
-    let profile:String;
-    let docenteAdministrativo= new RegExp (/\w+@uniquindio\.edu\.co/,'i');
-    let estudiante= new RegExp (/\w+@uqvirtual\.edu\.co/,'i');
-    if(docenteAdministrativo.test(email)===true){
-      profile="Docente/Administrativo";
-    }else if(estudiante.test(email)===true){
-      profile="Estudiante";
-    }else{
-      profile="Invitado";
+    let profile: String;
+    let docenteAdministrativo = new RegExp(/\w+@uniquindio\.edu\.co/, 'i');
+    let estudiante = new RegExp(/\w+@uqvirtual\.edu\.co/, 'i');
+    if (docenteAdministrativo.test(email) === true) {
+      profile = "Docente/Administrativo";
+    } else if (estudiante.test(email) === true) {
+      profile = "Estudiante";
+    } else {
+      profile = "Invitado";
     }
 
     return new Promise((resolve, rejected) => {
@@ -68,7 +68,7 @@ export class AuthService {
       this.afauth.createUserWithEmailAndPassword(email, password).then(res => {
 
         const uid = res.user.uid;
-        console.log(profile)
+        console.log(profile);
         this.db.collection('users').doc(uid).set({
 
           id: uid,
@@ -132,7 +132,7 @@ export class AuthService {
               text: 'El correo ' + email + ' que acaba de ingresar no está registrado',
               icon: 'error',
               confirmButtonText: 'Confirmar'
-            })
+            });
             //console.log('Nohola');
             this.remember();
             this.contador = 0;
@@ -147,15 +147,15 @@ export class AuthService {
           text: 'Formato de correo invalido, por favor ingrese su correo.',
           icon: 'error',
           confirmButtonText: 'Confirmar'
-        })
+        });
       }
     } else {
       Swal.fire({
-              title: 'Error',
-              text: 'Por favor ingrese su correo electronico.',
-              icon: 'error',
-              confirmButtonText: 'Confirmar'
-            })
+        title: 'Error',
+        text: 'Por favor ingrese su correo electronico.',
+        icon: 'error',
+        confirmButtonText: 'Confirmar'
+      });
     }
   }
 }
