@@ -18,7 +18,12 @@ const routes: Routes = [
   {
     path: 'tableroMando',
     loadChildren: () => import('./tablero-mando/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'rememberPass',
+    loadChildren: () => import('./remember-pass/remember-pass.module').then( m => m.RememberPassPageModule),canActivate: [NologinGuard]
   }
+
 
 
 ];
