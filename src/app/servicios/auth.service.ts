@@ -5,7 +5,9 @@ import { enableProdMode } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
+import Swal from 'sweetalert2';
 
+const swal = require('sweetalert2')
 
 @Injectable({
   providedIn: 'root'
@@ -21,13 +23,18 @@ export class AuthService {
     if (email != null && password != null) {
       return new Promise((resolve, rejected) => {
         this.afauth.signInWithEmailAndPassword(email, password).then(user => {
-          console.log('Esta logueado: ' + user);
+          //console.log('Esta logueado: ' + user);
           resolve(user);
         }).catch(err => rejected(err));
 
       });
     } else {
-      alert('Le faltan campos por llenar');
+      Swal.fire({
+        title: 'Error',
+        text: 'Le faltan campos por llenar.',
+        icon: 'error',
+        confirmButtonText: 'Confirmar'
+      })
     }
 
   }
@@ -105,9 +112,13 @@ export class AuthService {
           for (let array of this.usuariosArreglo) {
 
             if (email === array && this.contador == 0) {
-
-              alert('El envio fue exítoso, verifique su correo para restablecer su contraseña');
-              console.log('hola');
+              Swal.fire({
+                title: 'Correo enviado',
+                text: 'El envio fue exítoso, verifique su correo para restablecer su contraseña.',
+                icon: 'success',
+                confirmButtonText: 'Confirmar'
+              })
+              //console.log('hola');
               this.logout();
               this.contador = 1;
               return this.afauth.sendPasswordResetEmail(email);
@@ -116,9 +127,13 @@ export class AuthService {
           }
 
           if (this.contador == 0) {
-
-            alert('El correo ' + email + ' que acaba de ingresar no está registrado');
-            console.log('Nohola');
+            Swal.fire({
+              title: 'Error',
+              text: 'El correo ' + email + ' que acaba de ingresar no está registrado',
+              icon: 'error',
+              confirmButtonText: 'Confirmar'
+            })
+            //console.log('Nohola');
             this.remember();
             this.contador = 0;
           }
@@ -127,10 +142,20 @@ export class AuthService {
 
         });
       } else {
-        alert('Esto no es un correo, ingrese su correo.');
+        Swal.fire({
+          title: 'Error',
+          text: 'Formato de correo invalido, por favor ingrese su correo.',
+          icon: 'error',
+          confirmButtonText: 'Confirmar'
+        })
       }
     } else {
-      alert('El campo está vacio');
+      Swal.fire({
+              title: 'Error',
+              text: 'Por favor ingrese su correo electronico.',
+              icon: 'error',
+              confirmButtonText: 'Confirmar'
+            })
     }
   }
 }
