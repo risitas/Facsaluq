@@ -123,9 +123,7 @@ export class AuthService {
               this.contador = 1;
               return this.afauth.sendPasswordResetEmail(email);
             }
-
           }
-
           if (this.contador == 0) {
             Swal.fire({
               title: 'Error',
@@ -137,9 +135,6 @@ export class AuthService {
             this.remember();
             this.contador = 0;
           }
-
-
-
         });
       } else {
         Swal.fire({
