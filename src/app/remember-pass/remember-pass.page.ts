@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../servicios/auth.service';
 
 @Component({
   selector: 'app-remember-pass',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RememberPassPage implements OnInit {
 
-  constructor() { }
+  public email: string;
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
+  resetMyPass() {
+
+    this.authService.resetPassword(this.email);
+
+    //if(this.email != null){
+
+    //  this.authService.resetPassword(this.email).then(() => {
+    //    console.log('enviado');
+    //  }).catch(() => {
+    //    console.log('error');
+   //   });
+  //  }else{
+  //    alert('Las instrucciones son muy claras');
+  //  }
+
+   
+  }
 }

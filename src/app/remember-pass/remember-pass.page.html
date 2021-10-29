@@ -1,24 +1,26 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar color="secondary">
-    <ion-title>Recuperar contraseña</ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
-    </ion-buttons>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="center">¿Olvidaste tu contraseña?</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div id="header">
-    <h1>Restablecer contraseña</h1>
-    <ion-label style="text-align:center">  Ingresa el correo electrónico con el que te registraste, te enviaremos instrucciones para crear una nueva contraseña
-    </ion-label>
-  </div>
+<ion-content class="ion-padding">
 
-  <form id="form">
-    <ion-item class="ion-margin-bottom">
-      <ion-input></ion-input>
+  <form class="ion-padding-top" (submit)="resetMyPass()">
+
+    <div class="dato">
+      <label> Escribe tu <b>correo electrónico</b>, para enviarte las instrucciones para crear una <b>nueva contraseña
+          en Facsaluq a un clic</b>.
+      </label>
+    </div>
+
+    <ion-item class="ion-margin-bottom dato">
+      <ion-input type="text" [(ngModel)]="email" placeholder="Ingrese su correo electrónico" name="email"></ion-input>
     </ion-item>
-    <ion-button routerLink="/login"expand="block" shape="round" color="secondary">Enviar </ion-button>
+    <ion-button class="ion-margin-top" type="submit" expand="block" shape="round">Enviar </ion-button>
 
   </form>
+  <div class="ion-text-center ion-margin-top">
+    <a href="/login" expand="block"> Quiero loguearme</a>
+  </div>
 </ion-content>
