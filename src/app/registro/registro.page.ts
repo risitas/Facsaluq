@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../servicios/auth.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
+const swal = require('sweetalert2')
 
 
 @Component({
@@ -16,6 +18,7 @@ export class RegistroPage implements OnInit {
   public email: string;
   public password: string;
   public reppassword: string;
+  
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -29,18 +32,44 @@ export class RegistroPage implements OnInit {
     if(this.password===this.reppassword)
     {
       this.auth.register(this.email, this.password, this.nombres, this.apellidos).then(auth => {
+        Swal.fire({
+          title: '¡Registro completado!',
+          text: 'El registro se realizó correctamente.',
+          icon: 'success',
+          confirmButtonText: 'Confirmar'
+        })
         this.router.navigate(['/tableroMando']);
       }).catch(err => {
             if(err.code==="auth/invalid-email"){
-              alert("El correo tiene un formato invalido.")
+              Swal.fire({
+                title: 'Error!',
+                text: 'El correo tiene un formato invalido.',
+                icon: 'error',
+                confirmButtonText: 'Confirmar'
+              })
             }else if(err.code==="auth/weak-password"){
-              alert("La contraseña debe tener minimo 6 caracteres.")
+              Swal.fire({
+                title: 'Error!',
+                text: 'La contraseña debe tener minimo 6 caracteres.',
+                icon: 'error',
+                confirmButtonText: 'Confirmar'
+              })
             }else if(err.code==="auth/email-already-in-use"){
-              alert("Ya se encuentra un usuario registrado con ese correo.")
+              Swal.fire({
+                title: 'Error!',
+                text: 'Ya se encuentra un usuario registrado con el correo electrónico ingresado.',
+                icon: 'error',
+                confirmButtonText: 'Confirmar'
+              })
             }
         });
     }else{
-      alert("Las constraseñas no coinciden")
+      Swal.fire({
+        title: 'Error!',
+        text: 'Las contraseñas no coinciden.',
+        icon: 'error',
+        confirmButtonText: 'Confirmar'
+      })
     }
   }
 }
