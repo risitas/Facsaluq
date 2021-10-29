@@ -1,6 +1,6 @@
 {
-  "name": "Facsaluq a un clic",
-  "short_name": "Facsaluq a un clic",
+  "name": "app",
+  "short_name": "app",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
