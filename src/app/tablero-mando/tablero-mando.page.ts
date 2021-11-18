@@ -13,6 +13,7 @@ export class TableroMandoPage implements OnInit {
   ngOnInit() {
   }
 
+
   onLogout() {
     this.authservice.logout();
   }

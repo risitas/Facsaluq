@@ -1,26 +1,111 @@
 <ion-header>
   <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu"></ion-menu-button>
+    </ion-buttons>
+
     <ion-title class="center">TableroMando</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<ion-menu 
+    side="start" 
+    menuId="menu"
+    contentId="principal">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>Editar Perfil</ion-item>
+      <ion-item (click)="onLogout()">Cerrar Sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="principal"></ion-router-outlet>
 <ion-content>
-
-  <ion-item>
-
-    <div class="dato">
-      <h1><br><span> Facsaluq a un clic.</span></h1>
-      <p class="lead">Es una aplicación de la <b>Faculta de la salud</b> que busca facilitar el acceso a las diferentes
-        plataformas de la Universidad del Quindío.
-        Además incorpora todo los programas de la Faculta.<a href="https://www.uniquindio.edu.co/">Univerisad del
-          Quindío.</a>.</p>
-
-    </div>
-
-
-  </ion-item>
-
-  <div class="center">
-    <ion-button (click)="onLogout()">Desconectarse</ion-button>
-  </div>
+  <ion-grid >
+      <ion-row >
+        <ion-col>
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            1 of 3
+          </div>
+        </ion-col>
+        <ion-col >
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            2 of 3
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            1 of 3
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col>
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            1 of 3
+          </div>
+        </ion-col>
+        <ion-col >
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            2 of 3
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            1 of 3
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col>
+          <div class="tablero">
+            <a href="www.google.com"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            1 of 3
+          </div>
+        </ion-col>
+        <ion-col >
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            2 of 3
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            1 of 3
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col>
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            1 of 3
+          </div>
+        </ion-col>
+        <ion-col >
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            2 of 3
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="tablero">
+            <a href="https://www.google.com/"> <img class="iconos" src="assets/icon/icono.png" alt=""></a>
+            1 of 3
+          </div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
 </ion-content>
