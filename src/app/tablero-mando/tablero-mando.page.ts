@@ -25,12 +25,12 @@ export class TableroMandoPage implements OnInit {
 
     switch (perfil) {
       case "1":
-        $("#sac").css("display","none")
         break;
       case "2":
       console.log("Entre")
         $("#sac").css("display","none")
-        break;
+        $("#csu").css("display","none")
+        $("#aulas_virtuales").css("display","none")    
         break;
       case "3":
 

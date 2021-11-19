@@ -40,7 +40,19 @@ export class RegistroPage implements OnInit {
             icon: 'success',
             confirmButtonText: 'Confirmar'
           })
-          this.router.navigate(['/tableroMando']);
+
+          let profile:String;
+          let docenteAdministrativo= new RegExp (/\w+@uniquindio\.edu\.co/,'i');
+          let estudiante= new RegExp (/\w+@uqvirtual\.edu\.co/,'i');
+          if(docenteAdministrativo.test(this.email)===true){
+            profile="1"; //Docente/Administrativo
+          }else if(estudiante.test(this.email)===true){
+            profile="2"; //Estudiante
+          }else{
+            profile="3"; //Invitado
+          }
+
+          this.router.navigate(['/tableroMando/'+profile]);
         }).catch(err => {
           if (err.code === "auth/invalid-email") {
             Swal.fire({
