@@ -23,7 +23,7 @@ export class NologinGuard implements CanActivate {
          
           return true;
         } else {
-          //TODO: PENDIENTE!!!!
+          //TODO: PENDIENTE!!!!!!
           this.router.navigate(['/tableroMando/1']);
           return false;
         }

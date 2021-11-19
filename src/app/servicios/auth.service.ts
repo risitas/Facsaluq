@@ -30,9 +30,8 @@ export class AuthService {
       });
     } else {
       Swal.fire({
-        title: 'Error',
-        text: 'Le faltan campos por llenar.',
-        icon: 'error',
+        title: '¡Faltan campos por diligenciar!',
+        html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Debe diligenciar todos los campos.</h1>',
         confirmButtonText: 'Confirmar'
       })
     }
@@ -97,9 +96,8 @@ export class AuthService {
 
             if (email === array && this.contador == 0) {
               Swal.fire({
-                title: 'Correo enviado',
-                text: 'El envio fue exítoso, verifique su correo para restablecer su contraseña.',
-                icon: 'success',
+                title: '¡Correo enviador!',
+                html: '<img class="imagenSwal" src="assets/icon/3.registro.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
                 confirmButtonText: 'Confirmar'
               })
               //console.log('hola');
@@ -110,9 +108,8 @@ export class AuthService {
           }
           if (this.contador == 0) {
             Swal.fire({
-              title: 'Error',
-              text: 'El correo ' + email + ' que acaba de ingresar no está registrado',
-              icon: 'error',
+              title: '¡Usuario no registrado!',
+              html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">El correo ' + email + ' que acaba de ingresar no está registrado</h1>',
               confirmButtonText: 'Confirmar'
             })
             //console.log('Nohola');
@@ -122,19 +119,17 @@ export class AuthService {
         });
       } else {
         Swal.fire({
-          title: 'Error',
-          text: 'Formato de correo invalido, por favor ingrese su correo.',
-          icon: 'error',
+          title: '¡Correo invalido!',
+          html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Formato de correo invalido, por favor ingrese su correo.</h1>',
           confirmButtonText: 'Confirmar'
         })
       }
     } else {
       Swal.fire({
-              title: 'Error',
-              text: 'Por favor ingrese su correo electronico.',
-              icon: 'error',
-              confirmButtonText: 'Confirmar'
-            })
+        title: '¡Campos sin diligenciar!',
+        html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Por favor ingrese su correo electronico.</h1>',
+        confirmButtonText: 'Confirmar'
+      })
     }
   }
 }

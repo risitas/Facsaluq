@@ -38,8 +38,8 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/tableroMando/'+profile]);
 
     }).catch(err => Swal.fire({
-      title: 'Error',
-      html: '<img class="iconos" src="assets/icon/icono.png" alt=""><h1>Los datos ingresados son incorrectos.</h1>',
+      title: '¡Datos incorrectos!',
+      html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Los datos ingresados son incorrectos.</h1>',
       confirmButtonText: 'Confirmar'
     }));
   }
