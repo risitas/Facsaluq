@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule),canActivate: [NologinGuard]
   },
   {
-    path: 'tableroMando',
+    path: 'tableroMando/:perfil',
     loadChildren: () => import('./tablero-mando/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {

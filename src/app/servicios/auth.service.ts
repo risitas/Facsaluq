@@ -52,32 +52,19 @@ export class AuthService {
 
   register(email: string, password: string, name: string, lastname: string) {
 
-    let profile:String;
-    let docenteAdministrativo= new RegExp (/\w+@uniquindio\.edu\.co/,'i');
-    let estudiante= new RegExp (/\w+@uqvirtual\.edu\.co/,'i');
-    if(docenteAdministrativo.test(email)===true){
-      profile="Docente/Administrativo";
-    }else if(estudiante.test(email)===true){
-      profile="Estudiante";
-    }else{
-      profile="Invitado";
-    }
+    
 
     return new Promise((resolve, rejected) => {
 
       this.afauth.createUserWithEmailAndPassword(email, password).then(res => {
 
         const uid = res.user.uid;
-        console.log(profile)
         this.db.collection('users').doc(uid).set({
-
           id: uid,
           nombres: name,
           apellidos: lastname,
           correo: email,
-          contrasena: password,
-          perfil: profile
-
+          contrasena: password
         });
 
         resolve(res);
@@ -85,11 +72,8 @@ export class AuthService {
     });
   }
 
-
-
   resetPassword(email: string) {
-
-
+    
     if (email != null) {
 
       if (email.includes('@')) {
