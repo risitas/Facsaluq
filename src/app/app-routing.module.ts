@@ -16,8 +16,20 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule),canActivate: [NologinGuard]
   },
   {
-    path: 'tableroMando/:perfil',
+    path: 'tableroMando',
     loadChildren: () => import('./tablero-mando/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'tableroMandoDocentes-Administrativos',
+    loadChildren: () => import('./tablero-mando-Docentes-Administrativos/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'tableroMandoEstudiantes',
+    loadChildren: () => import('./tablero-mando-estudiante/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'tableroMandoInvitados',
+    loadChildren: () => import('./tablero-mando-invitados/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {
     path: 'rememberPass',

@@ -51,7 +51,19 @@ export class RegistroPage implements OnInit {
             profile="3"; //Invitado
           }
 
-          this.router.navigate(['/tableroMando/'+profile]);
+          switch (profile) {
+            case "1":
+              this.router.navigate(['/tableroMandoDocentes-Administrativos']);
+              break;
+            case "2":
+              this.router.navigate(['/tableroMandoEstudiantes']);
+              break;
+            case "3":
+              this.router.navigate(['/tableroMandoInvitados']);
+              break;
+            default:
+              break;
+          }
         }).catch(err => {
           if (err.code === "auth/invalid-email") {
             Swal.fire({

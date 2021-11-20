@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title class="center">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-menu 
+    side="start" 
+    menuId="menu"
+    contentId="principal">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>Editar Perfil</ion-item>
+      <ion-item (click)="onLogout()">Cerrar Sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="principal"></ion-router-outlet>
+<ion-content>
+  <ion-grid id="panel_principal">
+    <ion-row >
+      <ion-col>
+        <div class="tablero">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/"> <img class="iconos" src="assets/icon/16.Medicina.png" alt=""></a>
+          PROGRAMA MEDICINA
+        </div>
+      </ion-col>
+      <ion-col >
+        <div class="tablero">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/314/enfermeria/"> <img class="iconos" src="assets/icon/17.Enfermeria.png" alt=""></a>
+          PROGRAMA ENFERMERÍA
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/315/gerontologia/"> <img class="iconos" src="assets/icon/18.Gerontologia.png" alt=""></a>
+          PROGRAMA GERONTOLOGÍA
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col>
+        <div class="tablero">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/313/seguridad-y-salud-en-el-trabajo/"> <img class="iconos" src="assets/icon/19.SST.png" alt=""></a>
+          PROGRAMA SEGURIDAD Y SALUD EN EL TRABAJO
+        </div>
+      </ion-col>
+      <ion-col >
+        <div class="tablero">
+          <a href="https://www.uniquindio.edu.co/convocatorias/"> <img class="iconos" src="assets/icon/11.Convocatorias.png" alt=""></a>
+          CONVOCATORIAS
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero">
+          <a href="https://www.youtube.com/channel/UC46RMqZYV9dG2LOgBnu3iNA"> <img class="iconos" src="assets/icon/14.CanalYoutubeFac.png" alt=""></a>
+          CANAL YOUTUBE FaCSalUQ
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col>
+        <div class="tablero">
+          <a href="https://noticias.uniquindio.edu.co/"> <img class="iconos" src="assets/icon/7.Noticias.png" alt=""></a>
+          NOTICIAS UNIQUINDIO
+        </div>
+      </ion-col>
+      <ion-col >
+        <div class="tablero">
+          <a href="https://rise.articulate.com/share/_nBywMFSK6nN1Wr36Td6Va6lYC7Eq1lQ#/"> <img class="iconos" src="assets/icon/20.eduLAB.png" alt=""></a>
+          HISTORIA EDULAB: proyecto transformación pedagógica
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero">
+          <a href="https://forms.gle/TGfnToXhaFTWSoig6"> <img class="iconos" src="assets/icon/21.Directorio.png" alt=""></a>
+          DIRECTORIO
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col>
+        <div class="tablero">
+          <a href="https://noticias.uniquindio.edu.co/"> <img class="iconos" src="assets/icon/7.Noticias.png" alt=""></a>
+          NOTICIAS UNIQUINDIO
+        </div>
+      </ion-col>
+      <ion-col >
+        <div class="tablero">
+          <a href="https://rise.articulate.com/share/_nBywMFSK6nN1Wr36Td6Va6lYC7Eq1lQ#/"> <img class="iconos" src="assets/icon/20.eduLAB.png" alt=""></a>
+          HISTORIA EDULAB: proyecto transformación pedagógica
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero">
+          <a href="https://forms.gle/TGfnToXhaFTWSoig6"> <img class="iconos" src="assets/icon/21.Directorio.png" alt=""></a>
+          DIRECTORIO
+        </div>
+      </ion-col>
+    </ion-row>
+      
+    <ion-row >
+      <ion-col>
+        <div class="tablero">
+          <a href="https://rise.articulate.com/share/_nBywMFSK6nN1Wr36Td6Va6lYC7Eq1lQ#/"> <img class="iconos" src="assets/icon/22.Eventos.png" alt=""></a>
+          CARTELERA DE EVENTOS FaCSalUQ
+        </div>
+      </ion-col>
+      <ion-col >
+        <div class="tablero">
+          <a href="https://rise.articulate.com/share/_nBywMFSK6nN1Wr36Td6Va6lYC7Eq1lQ#/"> <img class="iconos" src="assets/icon/22.Eventos.png" alt=""></a>
+          CARTELERA DE EVENTOS EXTERNOS
+        </div>
+      </ion-col>
+    </ion-row>
+      
+  </ion-grid>
+</ion-content>
