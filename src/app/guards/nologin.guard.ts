@@ -25,7 +25,7 @@ export class NologinGuard implements CanActivate {
          
           return true;
         } else {
-          this.router.navigate(['/tableroMando']);
+          this.router.navigate(['/tableroMando/0']);
           return false;
         }
   

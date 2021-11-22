@@ -53,13 +53,13 @@ export class RegistroPage implements OnInit {
 
           switch (profile) {
             case "1":
-              this.router.navigate(['/tableroMandoDocentes-Administrativos']);
+              this.router.navigate(['/tableroMandoDocentes-Administrativos/'+profile]);
               break;
             case "2":
-              this.router.navigate(['/tableroMandoEstudiantes']);
+              this.router.navigate(['/tableroMandoEstudiantes/'+profile]);
               break;
             case "3":
-              this.router.navigate(['/tableroMandoInvitados']);
+              this.router.navigate(['/tableroMandoInvitados/'+profile]);
               break;
             default:
               break;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../servicios/auth.service';
-import * as $ from 'jquery';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-tablero-mando',
@@ -9,11 +10,14 @@ import * as $ from 'jquery';
 })
 export class TableroMandoPage implements OnInit {
 
-  perfil: string;
+  profile: string;
 
-  constructor(public authservice: AuthService) { }
+  constructor(public authservice: AuthService, public activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.profile = this.activatedRoute.snapshot.paramMap.get("profile")
+
   }
 
   onLogout() {

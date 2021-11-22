@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../servicios/auth.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { profileEnd } from 'console';
 
 const swal = require('sweetalert2')
 
@@ -15,10 +16,12 @@ export class LoginPage implements OnInit {
 
   email: string;
   password: string;
+  profile: string;
 
   constructor(private authService: AuthService, public router: Router) { }
 
   ngOnInit() {
+    
   }
 
   onSubmitLogin() {
@@ -37,13 +40,13 @@ export class LoginPage implements OnInit {
 
       switch (profile) {
         case "1":
-          this.router.navigate(['/tableroMandoDocentes-Administrativos']);
+          this.router.navigate(['/tableroMandoDocentes-Administrativos/'+profile]);
           break;
         case "2":
-          this.router.navigate(['/tableroMandoEstudiantes']);
+          this.router.navigate(['/tableroMandoEstudiantes/'+profile]);
           break;
         case "3":
-          this.router.navigate(['/tableroMandoInvitados']);
+          this.router.navigate(['/tableroMandoInvitados/'+profile]);
           break;
         default:
           break;

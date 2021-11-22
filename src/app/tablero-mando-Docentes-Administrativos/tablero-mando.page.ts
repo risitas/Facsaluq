@@ -10,31 +10,13 @@ import * as $ from 'jquery';
 })
 export class TableroMandoPage implements OnInit {
 
-  perfil: string;
+  profile: string;
 
   constructor(public authservice: AuthService, public activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
 
-    this.perfil = this.activatedRoute.snapshot.paramMap.get("perfil")
-    this.ocultarElementos(this.perfil);
-
-  }
-
-  ocultarElementos(perfil){
-
-    switch (perfil) {
-      case "1":
-        break;
-      case "2": 
-        break;
-      case "3":
-
-        break;
-      default:
-        break;
-    }
-
+    this.profile = this.activatedRoute.snapshot.paramMap.get("profile")
 
   }
 

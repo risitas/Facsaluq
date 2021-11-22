@@ -16,25 +16,35 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule),canActivate: [NologinGuard]
   },
   {
-    path: 'tableroMando',
+    path: 'tableroMando/:profile',
     loadChildren: () => import('./tablero-mando/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {
-    path: 'tableroMandoDocentes-Administrativos',
+    path: 'tableroMandoDocentes-Administrativos/:profile',
     loadChildren: () => import('./tablero-mando-Docentes-Administrativos/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {
-    path: 'tableroMandoEstudiantes',
+    path: 'tableroMandoEstudiantes/:profile',
     loadChildren: () => import('./tablero-mando-estudiante/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {
-    path: 'tableroMandoInvitados',
+    path: 'tableroMandoInvitados/:profile',
     loadChildren: () => import('./tablero-mando-invitados/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {
     path: 'rememberPass',
     loadChildren: () => import('./remember-pass/remember-pass.module').then( m => m.RememberPassPageModule),canActivate: [NologinGuard]
+  },
+  {
+    path: 'editar-usuario/:profile',
+    loadChildren: () => import('./editar-usuario/editar-usuario.module').then( m => m.EditarUsuarioPageModule)
+  },
+  {
+    path: 'cambiar-contrasena/:profile',
+    loadChildren: () => import('./cambiar-contrasena/cambiar-contrasena.module').then( m => m.CambiarContrasenaPageModule)
   }
+
+
 
 
 
