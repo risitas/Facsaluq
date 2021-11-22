@@ -30,9 +30,8 @@ export class AuthService {
       });
     } else {
       Swal.fire({
-        title: 'Error',
-        text: 'Le faltan campos por llenar.',
-        icon: 'error',
+        title: '¡Faltan campos por diligenciar!',
+        html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Debe diligenciar todos los campos.</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -52,32 +51,19 @@ export class AuthService {
 
   register(email: string, password: string, name: string, lastname: string) {
 
-    let profile: String;
-    let docenteAdministrativo = new RegExp(/\w+@uniquindio\.edu\.co/, 'i');
-    let estudiante = new RegExp(/\w+@uqvirtual\.edu\.co/, 'i');
-    if (docenteAdministrativo.test(email) === true) {
-      profile = "Docente/Administrativo";
-    } else if (estudiante.test(email) === true) {
-      profile = "Estudiante";
-    } else {
-      profile = "Invitado";
-    }
+    
 
     return new Promise((resolve, rejected) => {
 
       this.afauth.createUserWithEmailAndPassword(email, password).then(res => {
 
         const uid = res.user.uid;
-        console.log(profile);
         this.db.collection('users').doc(uid).set({
-
           id: uid,
           nombres: name,
           apellidos: lastname,
           correo: email,
-          contrasena: password,
-          perfil: profile
-
+          contrasena: password
         });
 
         resolve(res);
@@ -85,11 +71,8 @@ export class AuthService {
     });
   }
 
-
-
   resetPassword(email: string) {
-
-
+    
     if (email != null) {
 
       if (email.includes('@')) {
@@ -113,9 +96,8 @@ export class AuthService {
 
             if (email === array && this.contador == 0) {
               Swal.fire({
-                title: 'Correo enviado',
-                text: 'El envio fue exítoso, verifique su correo para restablecer su contraseña.',
-                icon: 'success',
+                title: '¡Correo enviador!',
+                html: '<img class="imagenSwal" src="assets/icon/3.registro.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
                 confirmButtonText: 'Confirmar'
               })
               //console.log('hola');
@@ -126,9 +108,8 @@ export class AuthService {
           }
           if (this.contador == 0) {
             Swal.fire({
-              title: 'Error',
-              text: 'El correo ' + email + ' que acaba de ingresar no está registrado',
-              icon: 'error',
+              title: '¡Usuario no registrado!',
+              html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">El correo ' + email + ' que acaba de ingresar no está registrado</h1>',
               confirmButtonText: 'Confirmar'
             });
             //console.log('Nohola');
@@ -138,19 +119,17 @@ export class AuthService {
         });
       } else {
         Swal.fire({
-          title: 'Error',
-          text: 'Formato de correo invalido, por favor ingrese su correo.',
-          icon: 'error',
+          title: '¡Correo invalido!',
+          html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Formato de correo invalido, por favor ingrese su correo.</h1>',
           confirmButtonText: 'Confirmar'
         });
       }
     } else {
       Swal.fire({
-        title: 'Error',
-        text: 'Por favor ingrese su correo electronico.',
-        icon: 'error',
+        title: '¡Campos sin diligenciar!',
+        html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Por favor ingrese su correo electronico.</h1>',
         confirmButtonText: 'Confirmar'
-      });
+      })
     }
   }
 }
