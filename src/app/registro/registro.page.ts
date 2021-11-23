@@ -36,31 +36,51 @@ export class RegistroPage implements OnInit {
         this.auth.register(this.email, this.password, this.nombres, this.apellidos).then(auth => {
           Swal.fire({
             title: '¡Registro completado!',
-            text: 'El registro se realizó correctamente.',
-            icon: 'success',
+            html: '<img class="imagenSwal" src="assets/icon/3.registro.png" alt=""><h1 class="text"></h1>El registro se realizó correctamente.</h1>',
             confirmButtonText: 'Confirmar'
           })
-          this.router.navigate(['/tableroMando']);
+
+          let profile:String;
+          let docenteAdministrativo= new RegExp (/\w+@uniquindio\.edu\.co/,'i');
+          let estudiante= new RegExp (/\w+@uqvirtual\.edu\.co/,'i');
+          if(docenteAdministrativo.test(this.email)===true){
+            profile="1"; //Docente/Administrativo
+          }else if(estudiante.test(this.email)===true){
+            profile="2"; //Estudiante
+          }else{
+            profile="3"; //Invitado
+          }
+
+          switch (profile) {
+            case "1":
+              this.router.navigate(['/tableroMandoDocentes-Administrativos/'+profile]);
+              break;
+            case "2":
+              this.router.navigate(['/tableroMandoEstudiantes/'+profile]);
+              break;
+            case "3":
+              this.router.navigate(['/tableroMandoInvitados/'+profile]);
+              break;
+            default:
+              break;
+          }
         }).catch(err => {
           if (err.code === "auth/invalid-email") {
             Swal.fire({
-              title: 'Error!',
-              text: 'El correo tiene un formato invalido.',
-              icon: 'error',
+              title: '¡Formato invalido!',
+              html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">El correo tiene un formato invalido.</h1>',
               confirmButtonText: 'Confirmar'
             })
           } else if (err.code === "auth/weak-password") {
             Swal.fire({
-              title: 'Error!',
-              text: 'La contraseña debe tener minimo 6 caracteres.',
-              icon: 'error',
+              title: '¡Contraseña invalida!',
+              html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">La contraseña debe tener minimo 6 caracteres.</h1>',
               confirmButtonText: 'Confirmar'
             })
           } else if (err.code === "auth/email-already-in-use") {
             Swal.fire({
-              title: 'Error!',
-              text: 'Ya se encuentra un usuario registrado con el correo electrónico ingresado.',
-              icon: 'error',
+              title: '¡Correo invalido!',
+              html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Ya se encuentra un usuario registrado con el correo electrónico ingresado.</h1>',
               confirmButtonText: 'Confirmar'
             })
           }
@@ -68,18 +88,16 @@ export class RegistroPage implements OnInit {
 
       } else {
         Swal.fire({
-          title: 'Error!',
-          text: 'Las contraseñas no coinciden.',
-          icon: 'error',
+          title: '¡Verificacion de contraseña fallido!',
+          html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Las contraseñas no coinciden.</h1>',
           confirmButtonText: 'Confirmar'
         })
       }
     } else {
 
       Swal.fire({
-        title: 'Error',
-        text: 'Debe diligenciar todos los campos para poder registrarse.',
-        icon: 'error',
+        title: '¡Faltan campos por diligenciar!',
+        html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Debe diligenciar todos los campos para poder registrarse.</h1>',
         confirmButtonText: 'Confirmar'
       })
     }

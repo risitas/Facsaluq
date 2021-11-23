@@ -19,12 +19,13 @@ export class NologinGuard implements CanActivate {
    
       return this.afauth.authState.pipe(map(auth => {
 
+        //TODO: Revisar
+
         if (auth == null) {
          
           return true;
         } else {
-
-          this.router.navigate(['/tableroMando']);
+          this.router.navigate(['/tableroMando/0']);
           return false;
         }
   
