@@ -51,7 +51,7 @@ export class AuthService {
 
   register(email: string, password: string, name: string, lastname: string) {
 
-    
+
 
     return new Promise((resolve, rejected) => {
 
@@ -72,7 +72,7 @@ export class AuthService {
   }
 
   resetPassword(email: string) {
-    
+
     if (email != null) {
 
       if (email.includes('@')) {
@@ -131,5 +131,37 @@ export class AuthService {
         confirmButtonText: 'Confirmar'
       })
     }
+  }
+
+
+  //# Parte de la administración
+  //Crud  de  usuario.
+
+  read(email: string) {
+
+    //#Leer la lectura
+    const lectura = this.db.collection('users').get().toPromise();
+    return lectura.then(res => {
+      //   console.log(res.docs);
+      //#Es todo el documento.
+      const document = res.docs;
+      for (let object of document) {
+
+        const dts: any = object.data();
+
+        //  console.log(dts.correo + 'aparte');
+        this.usuariosArreglo.push(dts.correo);
+      }
+
+      for (let array of this.usuariosArreglo) {
+
+        if (email === array) {
+
+          console.log(res.docs);
+
+        }
+      }
+
+    });
   }
 }

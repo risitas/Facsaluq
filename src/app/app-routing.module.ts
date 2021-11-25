@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule),canActivate: [NologinGuard]
+    loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule), canActivate: [NologinGuard]
   },
   {
     path: 'tableroMando/:profile',
@@ -33,17 +33,44 @@ const routes: Routes = [
   },
   {
     path: 'rememberPass',
-    loadChildren: () => import('./remember-pass/remember-pass.module').then( m => m.RememberPassPageModule),canActivate: [NologinGuard]
+    loadChildren: () => import('./remember-pass/remember-pass.module').then(m => m.RememberPassPageModule), canActivate: [NologinGuard]
   },
   {
     path: 'editar-usuario/:profile',
-    loadChildren: () => import('./editar-usuario/editar-usuario.module').then( m => m.EditarUsuarioPageModule)
+    loadChildren: () => import('./editar-usuario/editar-usuario.module').then(m => m.EditarUsuarioPageModule)
   },
   {
     path: 'cambiar-contrasena/:profile',
-    loadChildren: () => import('./cambiar-contrasena/cambiar-contrasena.module').then( m => m.CambiarContrasenaPageModule)
+    loadChildren: () => import('./cambiar-contrasena/cambiar-contrasena.module').then(m => m.CambiarContrasenaPageModule)
+  },
+  {//Administración
+    path: 'tableroMandoAdmin/:profile',
+    loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then(m => m.TableroMandoAdminPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'createUsuario',
+    loadChildren: () => import('./create-usuario/create-usuario.module').then(m => m.CreateUsuarioPageModule)
+  },
+  {
+    path: 'deleteUsuario',
+    loadChildren: () => import('./delete-usuario/delete-usuario.module').then(m => m.DeleteUsuarioPageModule)
+  },
+  {
+    path: 'updateUsuario',
+    loadChildren: () => import('./update-usuario/update-usuario.module').then(m => m.UpdateUsuarioPageModule)
+  },
+  {
+    path: 'readUsuario',
+    loadChildren: () => import('./read-usuario/read-usuario.module').then(m => m.ReadUsuarioPageModule)
+  },
+  {
+    path: 'gestionarUsuario',
+    loadChildren: () => import('./gestionar-usuario/gestionar-usuario.module').then(m => m.GestionarUsuarioPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'updateLink',
+    loadChildren: () => import('./update-link/update-link.module').then(m => m.UpdateLinkPageModule), canActivate: [AuthGuard]
   }
-
 
 
 
