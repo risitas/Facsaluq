@@ -34,12 +34,7 @@ export class RegistroPage implements OnInit {
     if (validacion === true) {
       if (this.password === this.reppassword) {
         this.auth.register(this.email, this.password, this.nombres, this.apellidos).then(auth => {
-          Swal.fire({
-            title: '¡Registro completado!',
-            html: '<img class="imagenSwal" src="assets/icon/3.registro.png" alt=""><h1 class="text"></h1>El registro se realizó correctamente.</h1>',
-            confirmButtonText: 'Confirmar'
-          })
-
+          
           let profile:String;
           let docenteAdministrativo= new RegExp (/\w+@uniquindio\.edu\.co/,'i');
           let estudiante= new RegExp (/\w+@uqvirtual\.edu\.co/,'i');
@@ -64,6 +59,12 @@ export class RegistroPage implements OnInit {
             default:
               break;
           }
+          Swal.fire({
+            title: '¡Registro completado!',
+            html: '<img class="imagenSwal" src="assets/icon/3.registro.png" alt=""><h1 class="text"></h1>El registro se realizó correctamente.</h1>',
+            confirmButtonText: 'Confirmar'
+          })
+
         }).catch(err => {
           if (err.code === "auth/invalid-email") {
             Swal.fire({

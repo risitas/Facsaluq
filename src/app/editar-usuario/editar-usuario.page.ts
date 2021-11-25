@@ -21,6 +21,7 @@ export class EditarUsuarioPage implements OnInit {
   public isReadOnly: boolean;
   public tableroMando: string;
   public botonEditar: string;
+  public botonEliminar : string;
   public profile: string;
   public query:string;
   
@@ -35,6 +36,7 @@ export class EditarUsuarioPage implements OnInit {
     console.log(this.profile)
     this.isReadOnly = true;
     this.botonEditar = "Editar";
+    this.botonEliminar = "Eliminar";
   }
 
   onSubmitChangeUser(){
