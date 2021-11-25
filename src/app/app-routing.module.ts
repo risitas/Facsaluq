@@ -52,18 +52,6 @@ const routes: Routes = [
     loadChildren: () => import('./create-usuario/create-usuario.module').then(m => m.CreateUsuarioPageModule)
   },
   {
-    path: 'deleteUsuario',
-    loadChildren: () => import('./delete-usuario/delete-usuario.module').then(m => m.DeleteUsuarioPageModule)
-  },
-  {
-    path: 'updateUsuario',
-    loadChildren: () => import('./update-usuario/update-usuario.module').then(m => m.UpdateUsuarioPageModule)
-  },
-  {
-    path: 'readUsuario',
-    loadChildren: () => import('./read-usuario/read-usuario.module').then(m => m.ReadUsuarioPageModule)
-  },
-  {
     path: 'gestionarUsuario',
     loadChildren: () => import('./gestionar-usuario/gestionar-usuario.module').then(m => m.GestionarUsuarioPageModule), canActivate: [AuthGuard]
   },
