@@ -37,7 +37,6 @@ export class TableroMandoPage implements OnInit {
     modal.onDidDismiss().then((modalDataResponse) => {
       if (modalDataResponse !== null) {
         this.modalDataResponse = modalDataResponse.data;
-        console.log('Modal Sent Data : '+ modalDataResponse.data);
       }
     });
 

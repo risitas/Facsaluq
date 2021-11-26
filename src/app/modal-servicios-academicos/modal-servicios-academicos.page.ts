@@ -16,8 +16,11 @@ export class ModalServiciosAcademicosPage implements OnInit {
   ngOnInit() {
   }
 
-  regresar(){
-    this.router.navigate(['/tableroMandoPrueba']);
+  async regresar(){
+    const modal = await this.modalCtr.getTop();
+        if (modal) {
+            modal.dismiss();
+        }
   }
 
   
