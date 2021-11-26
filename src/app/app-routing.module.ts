@@ -66,7 +66,11 @@ const routes: Routes = [
   {
     path: 'modal-servicios-academicos',
     loadChildren: () => import('./modal-servicios-academicos/modal-servicios-academicos.module').then( m => m.ModalServiciosAcademicosPageModule)
+  },  {
+    path: 'modal-preguntas-frecuentes',
+    loadChildren: () => import('./modal-preguntas-frecuentes/modal-preguntas-frecuentes.module').then( m => m.ModalPreguntasFrecuentesPageModule)
   }
+
 
 
 ];

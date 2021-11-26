@@ -38,13 +38,15 @@
       </ion-col>
       <ion-col >
         <div class="tablero">
-          <a href="https://www.uniquindio.edu.co/programas/publicaciones/314/enfermeria/"> <img class="iconos" src="assets/icon/17.Enfermeria.png" alt=""></a>
+          <img class="iconos" src="assets/icon/17.Enfermeria.png" alt="" (click)="mostarPreguntasFrecuentes()">
+          <p *ngIf="modalDataResponse">{{modalDataResponse}}</p>
           Preguntas Académicas
         </div>
       </ion-col>
       <ion-col>
         <div class="tablero">
           <a href="https://www.uniquindio.edu.co/programas/publicaciones/315/gerontologia/"> <img class="iconos" src="assets/icon/18.Gerontologia.png" alt=""></a>
+          <p *ngIf="modalDataResponse">{{modalDataResponse}}</p>
           Biblioteca
         </div>
       </ion-col>

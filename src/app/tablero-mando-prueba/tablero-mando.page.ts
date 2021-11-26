@@ -4,6 +4,7 @@ import { AuthService } from '../servicios/auth.service';
 import Swal from 'sweetalert2';
 import { ModalController } from '@ionic/angular';
 import { ModalServiciosAcademicosPage } from '../modal-servicios-academicos/modal-servicios-academicos.page';
+import { ModalPreguntasFrecuentesPage } from '../modal-preguntas-frecuentes/modal-preguntas-frecuentes.page';
 
 const swal = require('sweetalert2');
 
@@ -32,6 +33,20 @@ export class TableroMandoPage implements OnInit {
       componentProps: {
         'name': 'The Winter Soldier'
       }
+    });
+
+    modal.onDidDismiss().then((modalDataResponse) => {
+      if (modalDataResponse !== null) {
+        this.modalDataResponse = modalDataResponse.data;
+      }
+    });
+
+    return await modal.present();
+  }
+
+  async mostarPreguntasFrecuentes(){
+    const modal = await this.modalCtrl.create({
+      component: ModalPreguntasFrecuentesPage
     });
 
     modal.onDidDismiss().then((modalDataResponse) => {

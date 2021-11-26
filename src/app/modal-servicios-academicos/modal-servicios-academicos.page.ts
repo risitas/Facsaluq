@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal-servicios-academicos',
@@ -9,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ModalServiciosAcademicosPage implements OnInit {
 
-  constructor(private modalCtr: ModalController,public router: Router) { 
+  constructor(private modalCtr: ModalController) { 
     
   }
 

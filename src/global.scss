@@ -127,3 +127,20 @@
   justify-content: center;
   grid-template-columns: 100px 100px 100px;
 }
+
+.tablero {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  margin:8px;
+}
+
+.iconos {
+  width:80px;
+  height:80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:150px;
+}
