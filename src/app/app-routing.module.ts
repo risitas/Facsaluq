@@ -16,22 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule), canActivate: [NologinGuard]
   },
   {
-    path: 'tableroMando/:profile',
-    loadChildren: () => import('./tablero-mando/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
-  },
-  {
-    path: 'tableroMandoDocentes-Administrativos/:profile',
-    loadChildren: () => import('./tablero-mando-Docentes-Administrativos/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
-  },
-  {
-    path: 'tableroMandoEstudiantes/:profile',
-    loadChildren: () => import('./tablero-mando-estudiante/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
-  },
-  {
-    path: 'tableroMandoInvitados/:profile',
-    loadChildren: () => import('./tablero-mando-invitados/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
-  },
-  {
     path: 'tableroMandoPrueba',
     loadChildren: () => import('./tablero-mando-prueba/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
@@ -46,10 +30,6 @@ const routes: Routes = [
   {
     path: 'cambiar-contrasena',
     loadChildren: () => import('./cambiar-contrasena/cambiar-contrasena.module').then(m => m.CambiarContrasenaPageModule)
-  },
-  {//Administración
-    path: 'tableroMandoAdmin/:profile',
-    loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then(m => m.TableroMandoAdminPageModule), canActivate: [AuthGuard]
   },
   {
     path: 'createUsuario',
