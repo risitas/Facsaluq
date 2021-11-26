@@ -14,7 +14,6 @@ export class ModalPreguntasFrecuentesPage implements OnInit {
   }
 
   onChangePre(opcion:string){
-    console.log(opcion)
     switch (opcion) {
       case "sst":
         window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/313/seguridad-y-salud-en-el-trabajo/";
@@ -35,7 +34,26 @@ export class ModalPreguntasFrecuentesPage implements OnInit {
   }
 
   onChangePost(opcion:string){
-    console.log(opcion)
+    switch (opcion) {
+      case "especializacionPediatria":
+        //window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        break;
+
+      case "maestriaRiesgosLaborales":
+        //window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        break;
+
+      case "maestriaCienciasBiomedicas":
+        //window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        break;
+
+      case "doctoradoCienciasBiomedicas":
+        //window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        break;
+    
+      default:
+        break;
+    }
   }
 
   async regresar(){
