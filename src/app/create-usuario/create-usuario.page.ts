@@ -8,6 +8,12 @@ import { RegistroPage } from '../registro/registro.page';
 })
 export class CreateUsuarioPage implements OnInit {
 
+  nombres: string;
+  apellidos: string;
+  email: string;
+  password: string;
+  repassword: string;
+
   constructor(private reutilizarRegistro: RegistroPage) { }
 
   ngOnInit() {
