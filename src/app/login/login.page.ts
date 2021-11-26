@@ -26,7 +26,8 @@ export class LoginPage implements OnInit {
 
   onSubmitLogin() {
     this.authService.login(this.email, this.password).then(res => {
-
+      this.router.navigate(['/tableroMandoPrueba']);
+/*
       let profile: String;
       let docenteAdministrativo = new RegExp(/\w+@uniquindio\.edu\.co/, 'i');
       let estudiante = new RegExp(/\w+@uqvirtual\.edu\.co/, 'i');
@@ -58,7 +59,7 @@ export class LoginPage implements OnInit {
         default:
           break;
       }
-
+*/
     }).catch(err => Swal.fire({
       title: '¡Datos incorrectos!',
       html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Los datos ingresados son incorrectos.</h1>',

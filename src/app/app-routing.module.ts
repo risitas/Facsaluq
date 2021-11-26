@@ -32,15 +32,19 @@ const routes: Routes = [
     loadChildren: () => import('./tablero-mando-invitados/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {
+    path: 'tableroMandoPrueba',
+    loadChildren: () => import('./tablero-mando-prueba/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
+  },
+  {
     path: 'rememberPass',
     loadChildren: () => import('./remember-pass/remember-pass.module').then(m => m.RememberPassPageModule), canActivate: [NologinGuard]
   },
   {
-    path: 'editar-usuario/:profile',
+    path: 'editar-usuario',
     loadChildren: () => import('./editar-usuario/editar-usuario.module').then(m => m.EditarUsuarioPageModule)
   },
   {
-    path: 'cambiar-contrasena/:profile',
+    path: 'cambiar-contrasena',
     loadChildren: () => import('./cambiar-contrasena/cambiar-contrasena.module').then(m => m.CambiarContrasenaPageModule)
   },
   {//Administración
@@ -58,7 +62,12 @@ const routes: Routes = [
   {
     path: 'updateLink',
     loadChildren: () => import('./update-link/update-link.module').then(m => m.UpdateLinkPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'modal-servicios-academicos',
+    loadChildren: () => import('./modal-servicios-academicos/modal-servicios-academicos.module').then( m => m.ModalServiciosAcademicosPageModule)
   }
+
 
 
 

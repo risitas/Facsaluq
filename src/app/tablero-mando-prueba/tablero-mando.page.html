@@ -19,8 +19,8 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item><a routerLink="/editar-usuario/3" expand="block">Editar Información</a></ion-item>
-      <ion-item><a routerLink="/cambiar-contrasena/3" expand="block">Cambiar Contraseña</a></ion-item>
+      <ion-item><a routerLink="/editar-usuario" expand="block">Editar Información</a></ion-item>
+      <ion-item><a routerLink="/cambiar-contrasena" expand="block">Cambiar Contraseña</a></ion-item>
       <ion-item (click)="onLogout()">Cerrar Sesión</ion-item>
     </ion-list>
   </ion-content>
@@ -31,20 +31,21 @@
     <ion-row >
       <ion-col>
         <div class="tablero">
-          <a href="https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/"> <img class="iconos" src="assets/icon/16.Medicina.png" alt=""></a>
-          Programa de Medicína
+          <img class="iconos" src="assets/icon/16.Medicina.png" alt="" (click)="mostarServiciosAcademicos()">
+          <p *ngIf="modalDataResponse">{{modalDataResponse}}</p>
+          Servicios Académicos
         </div>
       </ion-col>
       <ion-col >
         <div class="tablero">
           <a href="https://www.uniquindio.edu.co/programas/publicaciones/314/enfermeria/"> <img class="iconos" src="assets/icon/17.Enfermeria.png" alt=""></a>
-          Programa de Enfermería
+          Preguntas Académicas
         </div>
       </ion-col>
       <ion-col>
         <div class="tablero">
           <a href="https://www.uniquindio.edu.co/programas/publicaciones/315/gerontologia/"> <img class="iconos" src="assets/icon/18.Gerontologia.png" alt=""></a>
-          Programa de Gerontología
+          Biblioteca
         </div>
       </ion-col>
     </ion-row>
@@ -53,19 +54,19 @@
       <ion-col>
         <div class="tablero">
           <a href="https://www.uniquindio.edu.co/programas/publicaciones/313/seguridad-y-salud-en-el-trabajo/"> <img class="iconos" src="assets/icon/19.SST.png" alt=""></a>
-          Programa de Seguridad y Salud en el Trabajo
+          eduLAB
         </div>
       </ion-col>
       <ion-col >
         <div class="tablero">
           <a href="https://www.uniquindio.edu.co/convocatorias/"> <img class="iconos" src="assets/icon/11.Convocatorias.png" alt=""></a>
-          Convocatorias
+          Extensión
         </div>
       </ion-col>
       <ion-col>
         <div class="tablero">
           <a href="https://www.youtube.com/channel/UC46RMqZYV9dG2LOgBnu3iNA"> <img class="iconos" src="assets/icon/14.CanalYoutubeFac.png" alt=""></a>
-          Canal de Youtube FaCSalUQ
+          Bienestar Universitario
         </div>
       </ion-col>
     </ion-row>
@@ -74,37 +75,9 @@
       <ion-col>
         <div class="tablero">
           <a href="https://noticias.uniquindio.edu.co/"> <img class="iconos" src="assets/icon/7.Noticias.png" alt=""></a>
-          Noticias Uniquindio
+          Redes Sociales
         </div>
       </ion-col>
-      <ion-col >
-        <div class="tablero">
-          <a href="https://rise.articulate.com/share/_nBywMFSK6nN1Wr36Td6Va6lYC7Eq1lQ#/"> <img class="iconos" src="assets/icon/20.eduLAB.png" alt=""></a>
-          Historia eduLAB: Proyecto Transformación Pedagógica
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="tablero">
-          <a href="https://forms.gle/TGfnToXhaFTWSoig6"> <img class="iconos" src="assets/icon/21.Directorio.png" alt=""></a>
-          Directorio
-        </div>
-      </ion-col>
-    </ion-row>
-      
-    <ion-row >
-      <ion-col>
-        <div class="tablero">
-          <a href="https://rise.articulate.com/share/_nBywMFSK6nN1Wr36Td6Va6lYC7Eq1lQ#/"> <img class="iconos" src="assets/icon/22.Eventos.png" alt=""></a>
-          Cartelera de Eventos FaCSalUQ
-        </div>
-      </ion-col>
-      <ion-col >
-        <div class="tablero">
-          <a href="https://rise.articulate.com/share/_nBywMFSK6nN1Wr36Td6Va6lYC7Eq1lQ#/"> <img class="iconos" src="assets/icon/22.Eventos.png" alt=""></a>
-          Cartelera de Eventos Externos
-        </div>
-      </ion-col>
-    </ion-row>
-      
+    </ion-row>      
   </ion-grid>
 </ion-content>
