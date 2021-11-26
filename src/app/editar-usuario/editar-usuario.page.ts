@@ -33,7 +33,6 @@ export class EditarUsuarioPage implements OnInit {
   ngOnInit() {  
     this.profile = this.activatedRoute.snapshot.paramMap.get("profile")
     this.tableroMando = "/tableroMando/"+this.profile  
-    console.log(this.profile)
     this.isReadOnly = true;
     this.botonEditar = "Editar";
     this.botonEliminar = "Eliminar";

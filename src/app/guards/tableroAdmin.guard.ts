@@ -13,7 +13,6 @@ export class AuthGuard implements CanActivate {
 
   constructor(private afauth: AngularFireAuth, private router: Router) { }
 
-
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
@@ -21,14 +20,13 @@ export class AuthGuard implements CanActivate {
     return this.afauth.authState.pipe(map(auth => {
 
       if (auth == null) {
-        this.router.navigate(['/login']);
-        return false;
-      } else {
-
         return true;
+      } else {
+        this.router.navigate(['/tableroMando/3']);
+        return false;
       }
-
     }));
 
   }
+
 }
