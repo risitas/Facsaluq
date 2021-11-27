@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
-import Swal from 'sweetalert2';
 import { ModalController } from '@ionic/angular';
 import { ModalServiciosAcademicosPage } from '../modal-servicios-academicos/modal-servicios-academicos.page';
 import { ModalProgramasAcademicosPage } from '../modal-programas-academicos/modal-programas-academicos.page';
@@ -9,7 +8,6 @@ import { ModalBibliotecaPage } from '../modal-biblioteca/modal-biblioteca.page';
 import { ModalEdulabPage } from '../modal-edulab/modal-edulab.page';
 import { ModalExtensionPage } from '../modal-extension/modal-extension.page';
 import { ModalRedesSocialesPage } from '../modal-redes-sociales/modal-redes-sociales.page';
-import { ModalNormativaPage } from '../modal-normativa/modal-normativa.page';
 
 const swal = require('sweetalert2');
 
@@ -119,19 +117,7 @@ export class TableroMandoPage implements OnInit {
   }
 
 
-  async mostarNormativa(){
-    const modal = await this.modalCtrl.create({
-      component: ModalNormativaPage
-    });
-
-    modal.onDidDismiss().then((modalDataResponse) => {
-      if (modalDataResponse !== null) {
-        this.modalDataResponse = modalDataResponse.data;
-      }
-    });
-
-    return await modal.present();
-  }
+ 
   
 
   onLogout() {

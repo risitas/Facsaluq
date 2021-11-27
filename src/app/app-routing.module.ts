@@ -68,9 +68,6 @@ const routes: Routes = [
     loadChildren: () => import('./modal-redes-sociales/modal-redes-sociales.module').then( m => m.ModalRedesSocialesPageModule)
   },
   {
-    path: 'modal-normativa',
-    loadChildren: () => import('./modal-normativa/modal-normativa.module').then( m => m.ModalNormativaPageModule)
-  },  {
     path: 'tablero-mando-admin',
     loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then( m => m.TableroMandoAdminPageModule)
   }

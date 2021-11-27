@@ -36,19 +36,19 @@ export class ModalProgramasAcademicosPage implements OnInit {
   onChangePost(opcion:string){
     switch (opcion) {
       case "especializacionPediatria":
-        //window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/349/especializacion-en-pediatria/";
         break;
 
       case "maestriaRiesgosLaborales":
-        //window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/346/maestria-en-prevencion-de-riesgos-laborales/";
         break;
 
       case "maestriaCienciasBiomedicas":
-        //window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/368/maestria-en-ciencias-biomedicas/";
         break;
 
       case "doctoradoCienciasBiomedicas":
-        //window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/347/doctorado-en-ciencias-biomedicas/";
         break;
     
       default:

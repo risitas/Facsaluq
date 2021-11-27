@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../servicios/auth.service';
 
 @Component({
   selector: 'app-tablero-mando-admin',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableroMandoAdminPage implements OnInit {
 
-  constructor() { }
+  constructor(public authservice: AuthService, public activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  onLogout() {
+    this.authservice.logout();
   }
 
 }
