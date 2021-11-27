@@ -70,7 +70,11 @@ const routes: Routes = [
   {
     path: 'modal-normativa',
     loadChildren: () => import('./modal-normativa/modal-normativa.module').then( m => m.ModalNormativaPageModule)
+  },  {
+    path: 'tablero-mando-admin',
+    loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then( m => m.TableroMandoAdminPageModule)
   }
+
 
 
 

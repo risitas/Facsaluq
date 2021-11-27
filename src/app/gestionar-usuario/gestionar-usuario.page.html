@@ -6,18 +6,20 @@
 
 <ion-content>
 
-
-
-
-  <img class="icon" src="../assets/icon/1.ImagenApp+Login.png" alt="">
-
-  <div class="padre">
-    <label><b>Perfil para gestionar usuarios</b> <br><br>
-      Este perfil se encarga de gestionar los usuarios registrados. <br>
-      Crear, buscar, Actualizar y eliminar.<br><br>
-    </label>
-  </div><br><br>
-
+  <div class="row header">
+    <div class="col">Utility Company Name</div>
+    <div class="col">Service Code</div>
+    <div class="col">Pay Limit</div>
+    <div class="col">Account Number to Use</div>
+    <div class="col"></div>
+  </div>
+  <div class="row" ng-repeat="data in ctrl.data">
+    <div class="col">{{data.name}}</div>
+    <div class="col">{{data.code}}</div>
+    <div class="col">LK {{data.limit}}</div>
+    <div class="col">{{data.account}}</div>
+    <div class="col"><button class="button" ng-click="ctrl.add($index)">Add</button></div>
+  </div>
   <div class="">
     <ion-button href="/createUsuario">Registrar </ion-button>
     <ion-button href="/readUsuario">Buscar </ion-button>
