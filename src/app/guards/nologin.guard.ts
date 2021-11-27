@@ -25,7 +25,7 @@ export class NologinGuard implements CanActivate {
 
         return true;
       } else {
-
+        this.router.navigate(['/tableroMandoPrueba']);
 
         // let cadena = auth.email;
 

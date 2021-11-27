@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ModalPreguntasFrecuentesPage } from './modal-preguntas-frecuentes.page';
+import { ModalNormativaPage } from './modal-normativa.page';
 
-describe('ModalPreguntasFrecuentesPage', () => {
-  let component: ModalPreguntasFrecuentesPage;
-  let fixture: ComponentFixture<ModalPreguntasFrecuentesPage>;
+describe('ModalNormativaPage', () => {
+  let component: ModalNormativaPage;
+  let fixture: ComponentFixture<ModalNormativaPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalPreguntasFrecuentesPage ],
+      declarations: [ ModalNormativaPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ModalPreguntasFrecuentesPage);
+    fixture = TestBed.createComponent(ModalNormativaPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

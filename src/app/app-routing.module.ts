@@ -48,9 +48,33 @@ const routes: Routes = [
     loadChildren: () => import('./modal-servicios-academicos/modal-servicios-academicos.module').then( m => m.ModalServiciosAcademicosPageModule)
   },
   {
-    path: 'modal-preguntas-frecuentes',
-    loadChildren: () => import('./modal-preguntas-frecuentes/modal-preguntas-frecuentes.module').then( m => m.ModalPreguntasFrecuentesPageModule)
+    path: 'modal-programas-academicos',
+    loadChildren: () => import('./modal-programas-academicos/modal-programas-academicos.module').then( m => m.ModalProgramasAcademicosPageModule)
+  },  {
+    path: 'modal-biblioteca',
+    loadChildren: () => import('./modal-biblioteca/modal-biblioteca.module').then( m => m.ModalBibliotecaPageModule)
+  },
+  {
+    path: 'modal-edulab',
+    loadChildren: () => import('./modal-edulab/modal-edulab.module').then( m => m.ModalEdulabPageModule)
+  },
+  {
+    path: 'modal-extension',
+    loadChildren: () => import('./modal-extension/modal-extension.module').then( m => m.ModalExtensionPageModule)
+  },
+  {
+    path: 'modal-bienestar-universitario',
+    loadChildren: () => import('./modal-bienestar-universitario/modal-bienestar-universitario.module').then( m => m.ModalBienestarUniversitarioPageModule)
+  },
+  {
+    path: 'modal-redes-sociales',
+    loadChildren: () => import('./modal-redes-sociales/modal-redes-sociales.module').then( m => m.ModalRedesSocialesPageModule)
+  },
+  {
+    path: 'modal-normativa',
+    loadChildren: () => import('./modal-normativa/modal-normativa.module').then( m => m.ModalNormativaPageModule)
   }
+
 
 
 

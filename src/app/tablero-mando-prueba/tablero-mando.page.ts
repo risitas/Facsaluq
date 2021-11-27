@@ -4,7 +4,7 @@ import { AuthService } from '../servicios/auth.service';
 import Swal from 'sweetalert2';
 import { ModalController } from '@ionic/angular';
 import { ModalServiciosAcademicosPage } from '../modal-servicios-academicos/modal-servicios-academicos.page';
-import { ModalPreguntasFrecuentesPage } from '../modal-preguntas-frecuentes/modal-preguntas-frecuentes.page';
+import { ModalProgramasAcademicosPage } from '../modal-programas-academicos/modal-programas-academicos.page';
 
 const swal = require('sweetalert2');
 
@@ -44,9 +44,9 @@ export class TableroMandoPage implements OnInit {
     return await modal.present();
   }
 
-  async mostarPreguntasFrecuentes(){
+  async mostarProgramasAcademicos(){
     const modal = await this.modalCtrl.create({
-      component: ModalPreguntasFrecuentesPage
+      component: ModalProgramasAcademicosPage
     });
 
     modal.onDidDismiss().then((modalDataResponse) => {
