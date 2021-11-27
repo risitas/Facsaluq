@@ -29,7 +29,7 @@ export class NologinGuard implements CanActivate {
 
         // let cadena = auth.email;
 
-
+/** 
         if (auth.email.includes('administrador')) {
           // console.log('Admin');
           this.router.navigate(['/tableroMandoAdmin/4']);
@@ -43,7 +43,7 @@ export class NologinGuard implements CanActivate {
           //console.log('invitado');
           this.router.navigate(['/tableroMandoInvitados/1']);
         }
-
+*/
 
         return false;
       }
