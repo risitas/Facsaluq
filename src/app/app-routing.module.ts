@@ -16,8 +16,8 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule), canActivate: [NologinGuard]
   },
   {
-    path: 'tableroMandoPrueba',
-    loadChildren: () => import('./tablero-mando-prueba/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
+    path: 'tableroMando',
+    loadChildren: () => import('./tablero-mando/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {
     path: 'rememberPass',
@@ -50,7 +50,8 @@ const routes: Routes = [
   {
     path: 'modal-programas-academicos',
     loadChildren: () => import('./modal-programas-academicos/modal-programas-academicos.module').then( m => m.ModalProgramasAcademicosPageModule)
-  },  {
+  },
+  {
     path: 'modal-biblioteca',
     loadChildren: () => import('./modal-biblioteca/modal-biblioteca.module').then( m => m.ModalBibliotecaPageModule)
   },
@@ -61,10 +62,6 @@ const routes: Routes = [
   {
     path: 'modal-extension',
     loadChildren: () => import('./modal-extension/modal-extension.module').then( m => m.ModalExtensionPageModule)
-  },
-  {
-    path: 'modal-bienestar-universitario',
-    loadChildren: () => import('./modal-bienestar-universitario/modal-bienestar-universitario.module').then( m => m.ModalBienestarUniversitarioPageModule)
   },
   {
     path: 'modal-redes-sociales',

@@ -25,25 +25,7 @@ export class NologinGuard implements CanActivate {
 
         return true;
       } else {
-        this.router.navigate(['/tableroMandoPrueba']);
-
-        // let cadena = auth.email;
-
-/** 
-        if (auth.email.includes('administrador')) {
-          // console.log('Admin');
-          this.router.navigate(['/tableroMandoAdmin/4']);
-        } else if (auth.email.includes('uniquindio')) {
-          //console.log('profesor');
-          this.router.navigate(['/tableroMandoDocentes-Administrativos/3']);
-        } else if (auth.email.includes('uqvirtual')) {
-          //console.log('estudiante');
-          this.router.navigate(['/tableroMandoEstudiantes/2']);
-        } else {
-          //console.log('invitado');
-          this.router.navigate(['/tableroMandoInvitados/1']);
-        }
-*/
+        this.router.navigate(['/tableroMando']);
 
         return false;
       }

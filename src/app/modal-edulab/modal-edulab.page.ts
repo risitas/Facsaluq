@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-modal-edulab',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalEdulabPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtr: ModalController) { }
 
   ngOnInit() {
   }
 
+
+  async regresar(){
+    const modal = await this.modalCtr.getTop();
+        if (modal) {
+            modal.dismiss();
+        }
+  }
 }

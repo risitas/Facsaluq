@@ -25,11 +25,11 @@ export class LoginPage implements OnInit {
 
   onSubmitLogin() {
     this.authService.login(this.email, this.password).then(res => {
-      this.router.navigate(['/tableroMandoPrueba']);
+      this.router.navigate(['/tableroMando']);
 
     }).catch(err => Swal.fire({
       title: '¡Datos incorrectos!',
-      html: '<img class="imagenSwal" src="assets/icon/2.Error.png" alt=""><h1 class="text">Los datos ingresados son incorrectos.</h1>',
+      html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">Los datos ingresados son incorrectos.</h1>',
       confirmButtonText: 'Confirmar'
     }));
   }
