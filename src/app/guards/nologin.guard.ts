@@ -16,23 +16,41 @@ export class NologinGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-   
-      return this.afauth.authState.pipe(map(auth => {
 
-        //TODO: Revisar
+    return this.afauth.authState.pipe(map(auth => {
 
-        if (auth == null) {
-         
-          return true;
+      //TODO: Revisar
+
+      if (auth == null) {
+
+        return true;
+      } else {
+
+
+        // let cadena = auth.email;
+
+
+        if (auth.email.includes('administrador')) {
+          // console.log('Admin');
+          this.router.navigate(['/tableroMandoAdmin/4']);
+        } else if (auth.email.includes('uniquindio')) {
+          //console.log('profesor');
+          this.router.navigate(['/tableroMandoDocentes-Administrativos/3']);
+        } else if (auth.email.includes('uqvirtual')) {
+          //console.log('estudiante');
+          this.router.navigate(['/tableroMandoEstudiantes/2']);
         } else {
-          this.router.navigate(['/tableroMando/0']);
-          return false;
+          //console.log('invitado');
+          this.router.navigate(['/tableroMandoInvitados/1']);
         }
-  
-        //console.log(auth);
-        //return false;
-      }));
-  
-  }
 
+
+        return false;
+      }
+
+      //console.log(auth);
+      //return false;
+    }));
+
+  }
 }
