@@ -45,31 +45,31 @@ const routes: Routes = [
   },
   {
     path: 'modal-servicios-academicos',
-    loadChildren: () => import('./modal-servicios-academicos/modal-servicios-academicos.module').then( m => m.ModalServiciosAcademicosPageModule)
+    loadChildren: () => import('./modal-servicios-academicos/modal-servicios-academicos.module').then(m => m.ModalServiciosAcademicosPageModule)
   },
   {
     path: 'modal-programas-academicos',
-    loadChildren: () => import('./modal-programas-academicos/modal-programas-academicos.module').then( m => m.ModalProgramasAcademicosPageModule)
+    loadChildren: () => import('./modal-programas-academicos/modal-programas-academicos.module').then(m => m.ModalProgramasAcademicosPageModule)
   },
   {
     path: 'modal-biblioteca',
-    loadChildren: () => import('./modal-biblioteca/modal-biblioteca.module').then( m => m.ModalBibliotecaPageModule)
+    loadChildren: () => import('./modal-biblioteca/modal-biblioteca.module').then(m => m.ModalBibliotecaPageModule)
   },
   {
     path: 'modal-edulab',
-    loadChildren: () => import('./modal-edulab/modal-edulab.module').then( m => m.ModalEdulabPageModule)
+    loadChildren: () => import('./modal-edulab/modal-edulab.module').then(m => m.ModalEdulabPageModule)
   },
   {
     path: 'modal-extension',
-    loadChildren: () => import('./modal-extension/modal-extension.module').then( m => m.ModalExtensionPageModule)
+    loadChildren: () => import('./modal-extension/modal-extension.module').then(m => m.ModalExtensionPageModule)
   },
   {
     path: 'modal-redes-sociales',
-    loadChildren: () => import('./modal-redes-sociales/modal-redes-sociales.module').then( m => m.ModalRedesSocialesPageModule)
+    loadChildren: () => import('./modal-redes-sociales/modal-redes-sociales.module').then(m => m.ModalRedesSocialesPageModule)
   },
   {
     path: 'tableroMandoAdmin',
-    loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then( m => m.TableroMandoAdminPageModule)
+    loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then(m => m.TableroMandoAdminPageModule)
   }
 
 

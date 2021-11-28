@@ -25,11 +25,11 @@ export class LoginPage implements OnInit {
 
   onSubmitLogin() {
     this.authService.login(this.email, this.password).then(res => {
-      if(this.email="admin@facsaluq.com"){
-        console.log("Entre")
-        this.router.navigate(['/tableroMandoAdmin']);
-      }else{
-        this.router.navigate(['/tableroMando']);
+      if (this.email == 'admin@facsaluq.com') {
+        //   console.log("Entre")
+        return this.router.navigate(['/tableroMandoAdmin']);
+      } else {
+        return this.router.navigate(['/tableroMando']);
       }
 
     }).catch(err => Swal.fire({
