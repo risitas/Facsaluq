@@ -1,32 +1,95 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title class="center">tableroMando-admin</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu" aria-hidden="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title class="center">Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<ion-menu 
+    side="start" 
+    menuId="menu"
+    contentId="principal">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item><a routerLink="/gestionarUsuario" expand="block">Gestionar Usuarios</a></ion-item>
+      <ion-item (click)="onLogout()">Cerrar Sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="principal"></ion-router-outlet>
 <ion-content>
-
-  <img class="icon" src="../assets/icon/1.ImagenApp+Login.png" alt="">
-
-  <div class="padre">
-    <label><b>Perfil de administración</b> <br><br>
-      Este perfil se encarga de gestionar los usuarios, editar perfil y actualizar enlaces.<br><br>
-    </label>
-  </div><br><br>
-
-  <div class="center">
-    <ion-button class="ion-clock">Editar perfil</ion-button>
-  </div>
-  <div class="center">
-    <ion-button href="/updateLink" class="center">Actualizar enlaces</ion-button>
-  </div>
-  <div class="center">
-    <ion-button href="/gestionarUsuario" class="center">Gestionar Usuarios</ion-button>
-  </div>
-  <div class="center">
-    <ion-button (click)="onLogout()">Cerrar sesión</ion-button>
-  </div>
-
-
-
+  <ion-grid id="panel_principal">
+      <ion-row >
+        <ion-col id="sac">
+          <div class="tablero" >
+            <a href="https://enlinea.uniquindio.edu.co/enlinea/#!/categories"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/2.SAC.png" alt=""></a>
+            <ion-input placeholder="SAC"></ion-input>
+            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+          </div>
+        </ion-col>
+        <ion-col >
+          <div class="tablero" id="csu">
+            <a href="https://csu.uniquindio.edu.co/helppeople/Administracion/usuarios/Formulario.aspx"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/5.CSU.png" alt=""></a>
+            <ion-input placeholder="CSU"></ion-input>
+            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col>
+          <div class="tablero" id="aulas_virtuales">
+            <a href="https://www.uniquindio.edu.co/campus_virtual/"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/4.Campus-Virtual.png" alt=""></a>
+            <ion-input placeholder="Campus Virtual"></ion-input>
+            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+          </div>
+        </ion-col>
+        <ion-col >
+          <div class="tablero" id="aulas_virtuales">
+            <a href="https://aulasvirtuales.uniquindio.edu.co/login/index.php"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/3.AulasVirtuales.png" alt=""></a>
+            <ion-input placeholder="Aulas Virtuales"></ion-input>
+            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col>
+          <div class="tablero" id="aulas_virtuales">
+            <a href="https://www.uniquindio.edu.co/campus_virtual/"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/4.Campus-Virtual.png" alt=""></a>
+            <ion-input placeholder="Campus Virtual"></ion-input>
+            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+          </div>
+        </ion-col>
+        <ion-col >
+          <div class="tablero" id="aulas_virtuales">
+            <a href="https://aulasvirtuales.uniquindio.edu.co/login/index.php"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/3.AulasVirtuales.png" alt=""></a>
+            <ion-input placeholder="Aulas Virtuales"></ion-input>
+            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col>
+          <div class="tablero" id="aulas_virtuales">
+            <a href="https://www.uniquindio.edu.co/campus_virtual/"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/4.Campus-Virtual.png" alt=""></a>
+            <ion-input placeholder="Campus Virtual"></ion-input>
+            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+          </div>
+        </ion-col>
+        <ion-col >
+          <div class="tablero" id="aulas_virtuales">
+            <a href="https://aulasvirtuales.uniquindio.edu.co/login/index.php"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/3.AulasVirtuales.png" alt=""></a>
+            <ion-input placeholder="Aulas Virtuales"></ion-input>
+            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
 </ion-content>

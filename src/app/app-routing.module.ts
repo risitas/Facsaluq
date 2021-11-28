@@ -16,24 +16,8 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule), canActivate: [NologinGuard]
   },
   {
-    path: 'tableroMando/:profile',
+    path: 'tableroMando',
     loadChildren: () => import('./tablero-mando/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
-  },
-  {
-    path: 'tableroMandoDocentes-Administrativos/:profile',
-    loadChildren: () => import('./tablero-mando-Docentes-Administrativos/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
-  },
-  {
-    path: 'tableroMandoEstudiantes/:profile',
-    loadChildren: () => import('./tablero-mando-estudiante/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
-  },
-  {
-    path: 'tableroMandoInvitados/:profile',
-    loadChildren: () => import('./tablero-mando-invitados/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
-  },
-  {
-    path: 'tableroMandoPrueba',
-    loadChildren: () => import('./tablero-mando-prueba/tablero-mando.module').then(m => m.TableroMandoPageModule), canActivate: [AuthGuard]
   },
   {
     path: 'rememberPass',
@@ -46,10 +30,6 @@ const routes: Routes = [
   {
     path: 'cambiar-contrasena',
     loadChildren: () => import('./cambiar-contrasena/cambiar-contrasena.module').then(m => m.CambiarContrasenaPageModule)
-  },
-  {//Administración
-    path: 'tableroMandoAdmin/:profile',
-    loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then(m => m.TableroMandoAdminPageModule), canActivate: [AuthGuard]
   },
   {
     path: 'createUsuario',
@@ -68,9 +48,31 @@ const routes: Routes = [
     loadChildren: () => import('./modal-servicios-academicos/modal-servicios-academicos.module').then( m => m.ModalServiciosAcademicosPageModule)
   },
   {
-    path: 'modal-preguntas-frecuentes',
-    loadChildren: () => import('./modal-preguntas-frecuentes/modal-preguntas-frecuentes.module').then( m => m.ModalPreguntasFrecuentesPageModule)
+    path: 'modal-programas-academicos',
+    loadChildren: () => import('./modal-programas-academicos/modal-programas-academicos.module').then( m => m.ModalProgramasAcademicosPageModule)
+  },
+  {
+    path: 'modal-biblioteca',
+    loadChildren: () => import('./modal-biblioteca/modal-biblioteca.module').then( m => m.ModalBibliotecaPageModule)
+  },
+  {
+    path: 'modal-edulab',
+    loadChildren: () => import('./modal-edulab/modal-edulab.module').then( m => m.ModalEdulabPageModule)
+  },
+  {
+    path: 'modal-extension',
+    loadChildren: () => import('./modal-extension/modal-extension.module').then( m => m.ModalExtensionPageModule)
+  },
+  {
+    path: 'modal-redes-sociales',
+    loadChildren: () => import('./modal-redes-sociales/modal-redes-sociales.module').then( m => m.ModalRedesSocialesPageModule)
+  },
+  {
+    path: 'tableroMandoAdmin',
+    loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then( m => m.TableroMandoAdminPageModule)
   }
+
+
 
 
 

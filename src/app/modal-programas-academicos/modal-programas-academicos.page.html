@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <h3 class="text"><strong>Programas Académicos</strong></h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid id="panel_principal">
+    <ion-row >
+      <ion-col id="pregrado">
+        <div class="tablero" >
+          <strong>Pregrado</strong>
+          <br>
+          <br>
+         <img class="iconos" src="assets/icon/2.ProgramasAcademicos/1.Pregrado.png" alt=""> 
+         <ion-list>
+          <ion-item>
+            <ion-label>Opciones</ion-label>
+            <ion-select value="selectPregrado" #Pre (ionChange)="onChangePre(Pre.value)" interface="action-sheet">
+              <ion-select-option value="sst">SST</ion-select-option>
+              <ion-select-option value="gerontologia">Gerontologia</ion-select-option>
+              <ion-select-option value="enfermeria">Enfermería</ion-select-option>
+              <ion-select-option value="medicina">Medicina</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        </div>
+      </ion-col>
+      <ion-col >
+        <div class="tablero" id="postgrado">
+          <strong>Postgrado</strong>
+          <br>
+          <br>
+          <img class="iconos" src="assets/icon/2.ProgramasAcademicos/5.Posgrado.png" alt="">
+          <ion-list>
+            <ion-item>
+              <ion-label>Opciones</ion-label>
+              <ion-select value="selectPostgrado" #Post (ionChange)="onChangePost(Post.value)" interface="action-sheet">
+                <ion-select-option value="especializacionPediatria">Especialización Pediatría</ion-select-option>
+                <ion-select-option value="maestriaRiesgosLaborales">Maestría Riesgos Laborales</ion-select-option>
+                <ion-select-option value="maestriaCienciasBiomedicas">Maestría Ciencias Biomédicas</ion-select-option>
+                <ion-select-option value="doctoradoCienciasBiomedicas">Doctorado Ciencias Biomédicas</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+  <ion-button (click)="regresar()" expand="block">Regresar</ion-button>
+</ion-content>
+

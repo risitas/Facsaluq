@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../servicios/auth.service';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../servicios/auth.service';
+
 @Component({
   selector: 'app-tablero-mando-admin',
   templateUrl: './tablero-mando-admin.page.html',
@@ -17,5 +18,8 @@ export class TableroMandoAdminPage implements OnInit {
     this.authservice.logout();
   }
 
+  actualizarEnlace(){
+    
+  }
 
 }
