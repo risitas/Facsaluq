@@ -68,7 +68,7 @@ const routes: Routes = [
     loadChildren: () => import('./modal-redes-sociales/modal-redes-sociales.module').then( m => m.ModalRedesSocialesPageModule)
   },
   {
-    path: 'tablero-mando-admin',
+    path: 'tableroMandoAdmin',
     loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then( m => m.TableroMandoAdminPageModule)
   }
 

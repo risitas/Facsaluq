@@ -18,4 +18,8 @@ export class TableroMandoAdminPage implements OnInit {
     this.authservice.logout();
   }
 
+  actualizarEnlace(){
+    
+  }
+
 }

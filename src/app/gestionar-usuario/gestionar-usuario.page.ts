@@ -8,23 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class GestionarUsuarioPage implements OnInit {
   public data;
   constructor() {
-    this.data=[
-          {
-              name: "AiA",
-              code: "AI101",
-              limit: 25000,
-              account: "Life Insurance"
-          },
-          {
-              name: "Cargills",
-              code: "CF001",
-              limit: 30000,
-              account: "Food City"
-          }
-      ]
    }
 
   ngOnInit() {
+    
+    this.data=[
+      {
+          name: "AiA",
+          code: "AI101",
+          limit: 25000,
+          account: "Life Insurance"
+      },
+      {
+          name: "Cargills",
+          code: "CF001",
+          limit: 30000,
+          account: "Food City"
+      }
+  ]
   }
 
 }

@@ -5,23 +5,19 @@
 </ion-header>
 
 <ion-content>
-
-  <div class="row header">
-    <div class="col">Utility Company Name</div>
-    <div class="col">Service Code</div>
-    <div class="col">Pay Limit</div>
-    <div class="col">Account Number to Use</div>
-    <div class="col"></div>
-  </div>
-  <div class="row" ng-repeat="data in ctrl.data">
-    <div class="col">{{data.name}}</div>
-    <div class="col">{{data.code}}</div>
-    <div class="col">LK {{data.limit}}</div>
-    <div class="col">{{data.account}}</div>
-    <div class="col"><button class="button" ng-click="ctrl.add($index)">Add</button></div>
-  </div>
+  <table class="default">
+    <tr>
+      <td>Celda 1</td>
+      <td>Celda 2</td>
+      <td>Celda 3</td>
+    </tr>
+    <tr>
+      <td>Celda 4</td>
+      <td>Celda 5</td>
+      <td>Celda 6</td>
+    </tr>
+  </table>
   <div class="">
-    <ion-button href="/createUsuario">Registrar </ion-button>
     <ion-button href="/readUsuario">Buscar </ion-button>
     <ion-button href="/updateUsuario">Actualizar </ion-button>
     <ion-button href="/deleteUsuario">eliminar </ion-button>

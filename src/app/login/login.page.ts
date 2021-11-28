@@ -25,7 +25,12 @@ export class LoginPage implements OnInit {
 
   onSubmitLogin() {
     this.authService.login(this.email, this.password).then(res => {
-      this.router.navigate(['/tableroMando']);
+      if(this.email="admin@facsaluq.com"){
+        console.log("Entre")
+        this.router.navigate(['/tableroMandoAdmin']);
+      }else{
+        this.router.navigate(['/tableroMando']);
+      }
 
     }).catch(err => Swal.fire({
       title: '¡Datos incorrectos!',
