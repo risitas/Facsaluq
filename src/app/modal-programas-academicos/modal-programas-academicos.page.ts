@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-modal-programas-academicos',
@@ -8,59 +12,77 @@ import { ModalController } from '@ionic/angular';
 })
 export class ModalProgramasAcademicosPage implements OnInit {
 
-  constructor(private modalCtr: ModalController) { }
+  public bibliotecacrai: string;
+  public bibliotecafacultad: string;
+  public contactocrai: string;
+  public lines = [];
+
+  constructor(private modalCtr: ModalController, public activatedRoute: ActivatedRoute, private db: AngularFirestore, private afauth: AngularFireAuth, private router: Router) {
+
+
+    //________________________Leer los datos del documento de Lines y cargarlos__________
+    let docRef = this.db.collection('Link').doc('Idlink');
+
+    docRef.get().toPromise().then((doc) => {
+
+      const dts: any = doc.data();
+      this.lines.push(dts);
+
+    });
+
+  }
 
   ngOnInit() {
   }
 
-  onChangePre(opcion:string){
+  onChangePre(opcion: string) {
     switch (opcion) {
       case "sst":
-        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/313/seguridad-y-salud-en-el-trabajo/";
+        window.location.href = this.lines[0].SST;
         break;
 
       case "gerontologia":
-        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/315/gerontologia/";
+        window.location.href = this.lines[0].Gerontologia;
         break;
 
       case "enfermeria":
-        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/314/enfermeria/";
+        window.location.href = this.lines[0].Enfermeria;
         break;
-      
+
       case "medicina":
-        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/";
+        window.location.href = this.lines[0].Medicina;
         break;
     }
   }
 
-  onChangePost(opcion:string){
+  onChangePost(opcion: string) {
     switch (opcion) {
       case "especializacionPediatria":
-        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/349/especializacion-en-pediatria/";
+        window.location.href = this.lines[0].EspecializacionPediatra;
         break;
 
       case "maestriaRiesgosLaborales":
-        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/346/maestria-en-prevencion-de-riesgos-laborales/";
+        window.location.href = this.lines[0].MaestriaRiesgosLaborales;
         break;
 
       case "maestriaCienciasBiomedicas":
-        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/368/maestria-en-ciencias-biomedicas/";
+        window.location.href = this.lines[0].MaestriaCienciasBiomedicas;
         break;
 
       case "doctoradoCienciasBiomedicas":
-        window.location.href = "https://www.uniquindio.edu.co/programas/publicaciones/347/doctorado-en-ciencias-biomedicas/";
+        window.location.href = this.lines[0].DoctoradoCienciasBiomedicas;
         break;
-    
+
       default:
         break;
     }
   }
 
-  async regresar(){
+  async regresar() {
     const modal = await this.modalCtr.getTop();
-        if (modal) {
-            modal.dismiss();
-        }
+    if (modal) {
+      modal.dismiss();
+    }
   }
 
 }

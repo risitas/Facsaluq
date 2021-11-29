@@ -9,6 +9,11 @@ import { ModalEdulabPage } from '../modal-edulab/modal-edulab.page';
 import { ModalExtensionPage } from '../modal-extension/modal-extension.page';
 import { ModalRedesSocialesPage } from '../modal-redes-sociales/modal-redes-sociales.page';
 
+
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 const swal = require('sweetalert2');
 
 @Component({
@@ -21,8 +26,27 @@ export class TableroMandoPage implements OnInit {
   modalDataResponse: any;
 
   profile: string;
+  public linkbienestaruniversitario: string;
+  public linknormativas: string;
+  public lines = [];
 
-  constructor(public modalCtrl: ModalController, public authservice: AuthService, public activatedRoute: ActivatedRoute) { }
+  constructor(public modalCtrl: ModalController, public authservice: AuthService, public activatedRoute: ActivatedRoute, private db: AngularFirestore) {
+
+    //________________________Leer los datos del documento de Lines y cargarlos__________
+    let docRef = this.db.collection('Link').doc('Idlink');
+
+    docRef.get().toPromise().then((doc) => {
+
+      const dts: any = doc.data();
+      this.lines.push(dts);
+
+      this.linkbienestaruniversitario = this.lines[0].BienestarUniversitario;
+      this.linknormativas = this.lines[0].Normativa;
+
+    });
+
+
+  }
 
   ngOnInit() {
 

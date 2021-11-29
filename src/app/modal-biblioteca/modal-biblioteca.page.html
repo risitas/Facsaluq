@@ -6,20 +6,21 @@
 
 <ion-content>
 
-        <div class="tablero" >
-          <a href="https://library.uniquindio.edu.co/"> <img class="iconos" src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt=""></a>
-          Biblioteca CRAI
-        </div>
+  <div class="tablero">
+    <a [href]="bibliotecacrai"> <img class="iconos" src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt=""></a>
+    Biblioteca CRAI
+  </div>
 
-        <div class="tablero" id="csu">
-          <a href="https://library.uniquindio.edu.co/databases#faccienciasdelasalud"> <img class="iconos" src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png" alt=""></a>
-          Biblioteca Facultad
-        </div>
+  <div class="tablero" id="csu">
+    <a [href]="bibliotecafacultad"> <img class="iconos" src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png"
+        alt=""></a>
+    Biblioteca Facultad
+  </div>
 
-        <div class="tablero" id="aulas_virtuales">
-          <a href="https://api.whatsapp.com/send?phone=573103106996&text=Hola,%20necesito%20tu%20asesor%C3%ADa%20por%20favor%20%F0%9F%A4%93"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-          Contacto CRAI
-        </div>
+  <div class="tablero" id="aulas_virtuales">
+    <a [href]="contactocrai"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+    Contacto CRAI
+  </div>
 
-        <ion-button (click)="regresar()" expand="block">Regresar</ion-button>
+  <ion-button (click)="regresar()" expand="block">Regresar</ion-button>
 </ion-content>

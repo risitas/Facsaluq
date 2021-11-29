@@ -2,12 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { getAuth } from 'firebase/auth';
 
 
 @Component({
@@ -19,13 +15,16 @@ export class ModalServiciosAcademicosPage implements OnInit {
 
 
   public linksac: string;
+  public linkcsu: string;
+  public linkaulavirtual: string;
+  public linkcampusvirtual: string;
   public lines = [];
 
 
   constructor(private modalCtr: ModalController, public activatedRoute: ActivatedRoute, private db: AngularFirestore, private afauth: AngularFireAuth, private router: Router) {
 
 
-    //________________________Leer los datos y cargarlos__________
+    //________________________Leer los datos del documento de Lines y cargarlos__________
     let docRef = this.db.collection('Link').doc('Idlink');
 
     docRef.get().toPromise().then((doc) => {
@@ -34,11 +33,9 @@ export class ModalServiciosAcademicosPage implements OnInit {
       this.lines.push(dts);
 
       this.linksac = this.lines[0].SAC;
-
-
-      //  this.nombres = usuarioActivo[0].nombres;
-      //this.apellidos = usuarioActivo[0].apellidos;
-      //this.email = usuarioActivo[0].correo;
+      this.linkcsu = this.lines[0].CSU;
+      this.linkaulavirtual = this.lines[0].AulasVirtuales;
+      this.linkcampusvirtual = this.lines[0].CampusVirtual;
 
     });
     //Para crear campos con id -> identificados. lo que está dentro del doc('01')
