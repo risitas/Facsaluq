@@ -22,7 +22,7 @@ export class AuthGuard implements CanActivate {
       if (auth == null) {
         return true;
       } else {
-        this.router.navigate(['/tableroMando/3']);
+        this.router.navigate(['/tableroMando']);
         return false;
       }
     }));
