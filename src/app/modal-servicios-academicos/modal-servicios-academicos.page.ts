@@ -34,7 +34,6 @@ export class ModalServiciosAcademicosPage implements OnInit {
       this.lines.push(dts);
 
       this.linksac = this.lines[0].SAC;
-      console.log(this.lines[0].sac);
 
 
       //  this.nombres = usuarioActivo[0].nombres;
