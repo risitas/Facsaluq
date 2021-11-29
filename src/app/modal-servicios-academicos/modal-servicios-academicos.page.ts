@@ -17,11 +17,12 @@ import { getAuth } from 'firebase/auth';
 })
 export class ModalServiciosAcademicosPage implements OnInit {
 
+
   public linksac: string;
+  public lines = [];
+
+
   constructor(private modalCtr: ModalController, public activatedRoute: ActivatedRoute, private db: AngularFirestore, private afauth: AngularFireAuth, private router: Router) {
-
-
-    const usuarioActivo = [];
 
 
     //________________________Leer los datos y cargarlos__________
@@ -30,10 +31,10 @@ export class ModalServiciosAcademicosPage implements OnInit {
     docRef.get().toPromise().then((doc) => {
 
       const dts: any = doc.data();
-      usuarioActivo.push(dts);
+      this.lines.push(dts);
 
-      this.linksac = 'https://www.google.com';
-      console.log(usuarioActivo[0]);
+      this.linksac = this.lines[0].SAC;
+      console.log(this.lines[0].sac);
 
 
       //  this.nombres = usuarioActivo[0].nombres;
