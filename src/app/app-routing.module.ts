@@ -32,18 +32,6 @@ const routes: Routes = [
     loadChildren: () => import('./cambiar-contrasena/cambiar-contrasena.module').then(m => m.CambiarContrasenaPageModule)
   },
   {
-    path: 'createUsuario',
-    loadChildren: () => import('./create-usuario/create-usuario.module').then(m => m.CreateUsuarioPageModule)
-  },
-  {
-    path: 'gestionarUsuario',
-    loadChildren: () => import('./gestionar-usuario/gestionar-usuario.module').then(m => m.GestionarUsuarioPageModule), canActivate: [AuthGuard]
-  },
-  {
-    path: 'updateLink',
-    loadChildren: () => import('./update-link/update-link.module').then(m => m.UpdateLinkPageModule), canActivate: [AuthGuard]
-  },
-  {
     path: 'modal-servicios-academicos',
     loadChildren: () => import('./modal-servicios-academicos/modal-servicios-academicos.module').then(m => m.ModalServiciosAcademicosPageModule)
   },

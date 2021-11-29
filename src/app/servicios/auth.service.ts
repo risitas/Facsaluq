@@ -79,28 +79,24 @@ export class AuthService {
 
         const lectura = this.db.collection('users').get().toPromise();
         return lectura.then(res => {
-          //   console.log(res.docs);
           const document = res.docs;
           for (let object of document) {
 
 
             const dts: any = object.data();
 
-            //  console.log(dts.correo + 'aparte');
             this.usuariosArreglo.push(dts.correo);
           }
 
-          // console.log(this.usuariosArreglo);
 
           for (let array of this.usuariosArreglo) {
 
             if (email === array && this.contador == 0) {
               Swal.fire({
-                title: '¡Correo enviador!',
+                title: '¡Correo enviado!',
                 html: '<img class="imagenSwal" src="assets/icon/Personajes/3.registro.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
                 confirmButtonText: 'Confirmar'
               })
-              //console.log('hola');
               this.logout();
               this.contador = 1;
               return this.afauth.sendPasswordResetEmail(email);
@@ -112,7 +108,6 @@ export class AuthService {
               html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">El correo ' + email + ' que acaba de ingresar no está registrado</h1>',
               confirmButtonText: 'Confirmar'
             });
-            //console.log('Nohola');
             this.remember();
             this.contador = 0;
           }

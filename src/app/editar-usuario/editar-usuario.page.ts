@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { getAuth } from 'firebase/auth';
 
+import Swal from 'sweetalert2';
+
+const swal = require('sweetalert2');
+
 @Component({
   selector: 'app-editar-usuario',
   templateUrl: './editar-usuario.page.html',
@@ -72,11 +76,14 @@ export class EditarUsuarioPage implements OnInit {
 
     //________//
     if (this.botonEditar === "Editar") {
+      Swal.fire({
+        title: 'Editar información',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1> Puedes modificar tus nombres y apellidos. </h1>',
+        confirmButtonText: 'Confirmar'
+      })
       this.isReadOnly = false;
       this.botonEditar = "Guardar";
-
     } else if (this.botonEditar === "Guardar") {
-
 
       let actualizar = this.db.collection('users').doc(this.user.uid);
       actualizar.update({
@@ -85,12 +92,18 @@ export class EditarUsuarioPage implements OnInit {
 
       })
         .then(() => {
-
-          console.log('Document successfully updated!', actualizar);
+          Swal.fire({
+            title: 'Información Actualizada',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1> Actualización realizada con exito. </h1>',
+            confirmButtonText: 'Confirmar'
+          })
         })
         .catch((error) => {
-          // The document probably doesn't exist.
-          console.error('Error updating document: ', error);
+          Swal.fire({
+            title: 'La información no se ha podido actualizar',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">La actualización no ha sido exitosa, intentalo de nuevo.</h1>',
+            confirmButtonText: 'Confirmar'
+          });
         });
 
       this.isReadOnly = true;
@@ -105,23 +118,37 @@ export class EditarUsuarioPage implements OnInit {
 
   onRemove() {
     //Eliminar un documento
+      Swal.fire({
+        html: '<p>¿Está seguro de eliminar su cuenta?</p><img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt="">',
+        showDenyButton: true,
+        confirmButtonText: 'Aceptar',
+        denyButtonText: `Cancelar`,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.db.collection('users').doc(this.user.uid).delete().then(() => {
 
+            this.user.delete().then(() => {
+      
+              this.afauth.signOut().then(() => {
+      
+                //debe mostrar una alerta que diga que fue eliminado con exito.
+                Swal.fire('Usuario Eliminado', '', 'success')
+                this.router.navigate(['/login']);
+
+              }).catch((error) => {
+                console.error('Error removing document: ', error);
+              });
+            });
+          }).catch((error) => {
+            console.error('Error removing document: ', error);
+          });
+
+          
+
+        }
+      })
     //debe mostrar una alerta que pregunte primero antes de hacerlo
-    this.db.collection('users').doc(this.user.uid).delete().then(() => {
-
-      this.user.delete().then(() => {
-
-        this.afauth.signOut().then(() => {
-
-          //debe mostrar una alerta que diga que fue eliminado con exito.
-          this.router.navigate(['/login']);
-        }).catch((error) => {
-          console.error('Error removing document: ', error);
-        });
-      });
-    }).catch((error) => {
-      console.error('Error removing document: ', error);
-    });
+    
   }
 
   obtenerDato(id: string) {
