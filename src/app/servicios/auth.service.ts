@@ -137,31 +137,123 @@ export class AuthService {
   //# Parte de la administración
   //Crud  de  usuario.
 
-  read(email: string) {
+  // read(email: string) {
 
-    //#Leer la lectura
-    const lectura = this.db.collection('users').get().toPromise();
-    return lectura.then(res => {
-      //   console.log(res.docs);
-      //#Es todo el documento.
-      const document = res.docs;
-      for (let object of document) {
+  //#Leer la lectura
 
-        const dts: any = object.data();
 
-        //  console.log(dts.correo + 'aparte');
-        this.usuariosArreglo.push(dts.correo);
-      }
+  //  this.db.collection('pruebba').add({
+  //  first: 'Yosimar',
+  //middle: 'Naranjo',
+  //last: 'Mancilla',
+  //born: 1999
+  //})
+  //.then((docRef) => {
+  //        console.log('Document written with ID: ', docRef.id);
+  //    })
+  //  .catch((error) => {
+  //  console.error('Error adding document: ', error);
+  //});
 
-      for (let array of this.usuariosArreglo) {
+  //Para crear campos con id -> identificados. lo que está dentro del doc('01')
+  //significa que su id será 01
+  // this.db.collection('pruebba').doc('01').set({
+  // born: 1998,
+  //first: 'CA',
+  //last: 'USA',
+  //middle: 'Hola'
+  //})
+  //      .then((a) => {
+  //      console.log('Document successfully written!');
+  //  })
+  //      .catch((error) => {
+  //      console.error('Error writing document: ', error);
+  //  });
 
-        if (email === array) {
+  //Actualizar, se pone la colección y el id del documento a actualizar, luego se ponen los campos a actualizar.
+  // let actualizar = this.db.collection('pruebba').doc('01');
 
-          console.log(res.docs);
+  // console.log(actualizar)
+  // Set the "capital" field of the city 'DC'
+  // return actualizar.update({
+  //   first: 'Yosi-actualizo'
+  // })
+  //.then(() => {
+  //        console.log('Document successfully updated!', actualizar);
+  //    })
+  //  .catch((error) => {
+  // The document probably doesn't exist.
+  //  console.error('Error updating document: ', error);
+  //});
 
-        }
-      }
+  //Eliminar un documento
 
-    });
-  }
+  //  this.db.collection('pruebba').doc('01').delete().then(() => {
+  //   console.log('Document successfully deleted!');
+  // }).catch((error) => {
+  //  console.error('Error removing document: ', error);
+  // });
+
+  //Leer un documento de la colección
+  //  let docRef = this.db.collection('pruebba').doc('01');
+
+  //   docRef.get().toPromise().then((doc) => {
+  //   if (doc.exists) {
+  //   console.log('Document data:', doc.data());
+  // } else {
+  // doc.data() will be undefined in this case
+  // console.log('No such document!');
+  //      }
+  //  }).catch((error) => {
+  //console.log('Error getting document:', error);
+  //});
+
+  //leer todos los documentos
+
+  //  this.db.collection('pruebba').get().toPromise().then((querySnapshot) => {
+  //querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  //        console.log(doc.id, ' => ', doc.data());
+  //      });
+  //  });
+
+  //-----buscar documentos por where
+  //  this.db.collection('pruebba').ref.where('last', '==', 'USA')
+  //.get()
+  //      .then((querySnapshot) => {
+  //querySnapshot.forEach((doc) => {
+  //          // doc.data() is never undefined for query doc snapshots
+  //console.log(doc.id, ' => ', doc.data());
+  //});
+  //})
+  //.catch((error) => {
+  //        console.log('Error getting documents: ', error);
+  //});
+
+
+  //------Obtener todo los usuarios
+
+  //  this.db.collection('pruebba').get().toPromise().then((querySnapshot) => {
+  //querySnapshot.forEach((doc) => {
+  //        console.log(`${doc.id} => ${doc.data()} => ${doc.data().}`);
+  //    });
+  //    });
+
+
+  //Para traer en una lista lo que se requiera. CON EL PUSH
+  //  this.db.collection('pruebba').ref
+  //  .onSnapshot((querySnapshot) => {
+  //const cities = [];
+  //querySnapshot.forEach((doc) => {
+
+  //          const dts: any = doc.data();
+  //        cities.push(dts.last);
+  //    });
+  //console.log('Current cities in CA: ', cities[0], cities[1], cities[2], cities[3]);
+  //});
+
+
+
+  //  }
+
 }

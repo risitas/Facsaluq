@@ -8,10 +8,7 @@
     <ion-title class="center">Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-menu 
-    side="start" 
-    menuId="menu"
-    contentId="principal">
+<ion-menu side="start" menuId="menu" contentId="principal">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-title>Menú</ion-title>
@@ -28,17 +25,19 @@
 <ion-router-outlet id="principal"></ion-router-outlet>
 <ion-content>
   <ion-grid id="panel_principal">
-    <ion-row >
+    <ion-row>
       <ion-col>
         <div class="tablero">
-          <img class="iconos" src="assets/icon/1.ServiciosAcademicos/1.ServiciosAcademicos.png" alt="" (click)="mostarServiciosAcademicos()">
+          <img class="iconos" src="assets/icon/1.ServiciosAcademicos/1.ServiciosAcademicos.png" alt=""
+            (click)="mostarServiciosAcademicos()">
           <p *ngIf="modalDataResponse">{{modalDataResponse}}</p>
           Servicios Académicos
         </div>
       </ion-col>
-      <ion-col >
+      <ion-col>
         <div class="tablero">
-          <img class="iconos" src="assets/icon/2.ProgramasAcademicos/0.ProgramasAcademicos.png" alt="" (click)="mostarProgramasAcademicos()">
+          <img class="iconos" src="assets/icon/2.ProgramasAcademicos/0.ProgramasAcademicos.png" alt=""
+            (click)="mostarProgramasAcademicos()">
           <p *ngIf="modalDataResponse">{{modalDataResponse}}</p>
           Programas Académicos
         </div>
@@ -52,14 +51,14 @@
       </ion-col>
     </ion-row>
 
-    <ion-row >
+    <ion-row>
       <ion-col>
         <div class="tablero">
           <img class="iconos" src="assets/icon/4.eduLAB/0.eduLAB.png" alt="" (click)="mostarEdulab()">
           eduLAB
         </div>
       </ion-col>
-      <ion-col >
+      <ion-col>
         <div class="tablero">
           <img class="iconos" src="assets/icon/5.Extension/0.Extension.png" alt="" (click)="mostarExtension()">
           Extensión
@@ -67,25 +66,27 @@
       </ion-col>
       <ion-col>
         <div class="tablero">
-          <a href="https://www.uniquindio.edu.co/bienestar/"><img class="iconos" src="assets/icon/6.BienestarUniversitario.png" alt=""></a>
+          <a [href]="linkbienestaruniversitario"><img class="iconos" src="assets/icon/6.BienestarUniversitario.png"
+              alt=""></a>
           Bienestar Universitario
         </div>
       </ion-col>
     </ion-row>
 
-    <ion-row >
+    <ion-row>
       <ion-col>
         <div class="tablero">
-          <img class="iconos" src="assets/icon/7.RedesSociales/0.RedesSociales.png" alt="" (click)="mostarRedesSociales()">
+          <img class="iconos" src="assets/icon/7.RedesSociales/0.RedesSociales.png" alt=""
+            (click)="mostarRedesSociales()">
           Redes Sociales
         </div>
       </ion-col>
       <ion-col>
         <div class="tablero">
-          <a href="https://www.uniquindio.edu.co/publicaciones/408/normatividad-institucional/"><img class="iconos" src="assets/icon/8.Normativa/0.Normativa.png" alt=""></a>
+          <a [href]="linknormativas"><img class="iconos" src="assets/icon/8.Normativa/0.Normativa.png" alt=""></a>
           Normativa
         </div>
       </ion-col>
-    </ion-row>      
+    </ion-row>
   </ion-grid>
 </ion-content>

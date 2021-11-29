@@ -28,7 +28,9 @@ export class LoginPage implements OnInit {
       if (this.email == 'admin@facsaluq.com') {
         return this.router.navigate(['/tableroMandoAdmin']);
       } else {
+
         return this.router.navigate(['/tableroMando']);
+
       }
 
     }).catch(err => Swal.fire({

@@ -6,20 +6,21 @@
 
 <ion-content>
 
-        <div class="tablero" >
-          <a href=""> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png" alt=""></a>
-          Proyectos de Extensión
-        </div>
+  <div class="tablero">
+    <a [href]="linkproyectosdeextension"> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png"
+        alt=""></a>
+    Proyectos de Extensión
+  </div>
 
-        <div class="tablero" id="csu">
-          <a href=""> <img class="iconos" src="assets/icon/5.Extension/2.Convocatorias.png" alt=""></a>
-          Convocatorias
-        </div>
+  <div class="tablero" id="csu">
+    <a [href]="linkconvocatoria"> <img class="iconos" src="assets/icon/5.Extension/2.Convocatorias.png" alt=""></a>
+    Convocatorias
+  </div>
 
-        <div class="tablero" id="aulas_virtuales">
-          <a href=""> <img class="iconos" src="assets/icon/5.Extension/3.BolsaDeEmpleo.png" alt=""></a>
-          Bolsa de Empleo
-        </div>
+  <div class="tablero" id="aulas_virtuales">
+    <a [href]="linkbolsadeempleo"> <img class="iconos" src="assets/icon/5.Extension/3.BolsaDeEmpleo.png" alt=""></a>
+    Bolsa de Empleo
+  </div>
 
-        <ion-button (click)="regresar()" expand="block">Regresar</ion-button>
+  <ion-button (click)="regresar()" expand="block">Regresar</ion-button>
 </ion-content>
