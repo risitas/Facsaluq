@@ -8,10 +8,7 @@
     <ion-title class="center">Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-menu 
-    side="start" 
-    menuId="menu"
-    contentId="principal">
+<ion-menu side="start" menuId="menu" contentId="principal">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-title>Menú</ion-title>
@@ -26,261 +23,294 @@
 <ion-router-outlet id="principal"></ion-router-outlet>
 <ion-content>
   <ion-grid id="panel_principal">
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="sac">
-            <a href="https://enlinea.uniquindio.edu.co/enlinea/#!/categories"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/2.SAC.png" alt=""></a>
-            <ion-input placeholder="SAC"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="csu">
-            <a href="https://csu.uniquindio.edu.co/helppeople/Administracion/usuarios/Formulario.aspx"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/5.CSU.png" alt=""></a>
-            <ion-input placeholder="CSU"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="campus_virtual">
-            <a href="https://www.uniquindio.edu.co/campus_virtual/"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/4.Campus-Virtual.png" alt=""></a>
-            <ion-input placeholder="Campus Virtual"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="aulas_virtuales">
-            <a href="https://aulasvirtuales.uniquindio.edu.co/login/index.php"> <img class="iconos" src="assets/icon/1.ServiciosAcademicos/3.AulasVirtuales.png" alt=""></a>
-            <ion-input placeholder="Aulas Virtuales"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="SST">
-            <a href="https://www.uniquindio.edu.co/programas/publicaciones/313/seguridad-y-salud-en-el-trabajo/"> <img class="iconos" src="assets/icon/2.ProgramasAcademicos/1.SST.png" alt=""></a>
-            <ion-input placeholder="SST"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="gerontologia">
-            <a href="https://www.uniquindio.edu.co/programas/publicaciones/315/gerontologia/"> <img class="iconos" src="assets/icon/2.ProgramasAcademicos/2.Gerontologia.png" alt=""></a>
-            <ion-input placeholder="Gerontología"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="enfermeria">
-            <a href="https://www.uniquindio.edu.co/programas/publicaciones/314/enfermeria/"> <img class="iconos" src="assets/icon/2.ProgramasAcademicos/3.Enfermeria.png" alt=""></a>
-            <ion-input placeholder="Enfermeria"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="medicina">
-            <a href="https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/"> <img class="iconos" src="assets/icon/2.ProgramasAcademicos/4.Medicina.png" alt=""></a>
-            <ion-input placeholder="Medicina"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="ePediatria">
-            <a href="https://www.uniquindio.edu.co/programas/publicaciones/349/especializacion-en-pediatria/"> <img class="iconos" src="assets/icon/2.ProgramasAcademicos/6.EspecializacionenPediatria.png" alt=""></a>
-            <ion-input placeholder="E. Pediatría"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="mRiesgosLaborales">
-            <a href="https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/"> <img class="iconos" src="assets/icon/2.ProgramasAcademicos/7.MaestriaenCienciasBiomedicas.png" alt=""></a>
-            <ion-input placeholder="M. Riesgos Laborales"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="maestriaenCienciasBiomedicas">
-            <a href="https://www.uniquindio.edu.co/programas/publicaciones/349/especializacion-en-pediatria/"> <img class="iconos" src="assets/icon/2.ProgramasAcademicos/6.EspecializacionenPediatria.png" alt=""></a>
-            <ion-input placeholder="M. Ciencias Biomédicas"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="doctoradoEnCienciasBiomedicas">
-            <a href="https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/"> <img class="iconos" src="assets/icon/2.ProgramasAcademicos/7.MaestriaenCienciasBiomedicas.png" alt=""></a>
-            <ion-input placeholder="D. Ciencias Biomédicas"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="bilbiotecaCRAI">
-              <a href="https://library.uniquindio.edu.co/"> <img class="iconos" src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt=""></a>
-              <ion-input placeholder="Biblioteca CRAI"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="bibliotecaFac">
-            <a href="https://library.uniquindio.edu.co/databases#faccienciasdelasalud"> <img class="iconos" src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png" alt=""></a>
-            <ion-input placeholder="Biblioteca Facultad "></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="contactoCRAI">
-              <a href="https://api.whatsapp.com/send?phone=573103106996&text=Hola,%20necesito%20tu%20asesor%C3%ADa%20por%20favor%20%F0%9F%A4%93"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-              <ion-input placeholder="Contacto CRAI"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="proyectosExtension">
-            <a href=""> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png" alt=""></a>
-            <ion-input placeholder="Proyectos de Extensión"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="convocatorias">
-              <a href=""> <img class="iconos" src="assets/icon/5.Extension/2.Convocatorias.png" alt=""></a>
-              <ion-input placeholder="Convocatorias"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="bolsaEmpleo">
-            <a href=""> <img class="iconos" src="assets/icon/5.Extension/3.BolsaDeEmpleo.png" alt=""></a>
-            <ion-input placeholder="Bolsa de Empleo"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="CLIL">
-              <a href="https://youtube.com/playlist?list=PLt4rG0DW9nHMpCq7zIP3Qz681B7-Xpr8a"> <img class="iconos" src="assets/icon/4.eduLAB/1.CLIL.png" alt=""></a>
-               <ion-input placeholder="CLIL"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="asesoriasEdulab">
-            <a href="https://docs.google.com/forms/d/1q7QkU8vf91pcfxwVKXtdTOIYWS_tldpzxdUEbRo4ZJw/edit"> <img class="iconos" src="assets/icon/4.eduLAB/2.Asesorias.png" alt=""></a>
-            <ion-input placeholder="Asesorías EduLAB"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="guiaDidactica">
-              <a href="https://sites.google.com/d/1G35xEZTE-gboeWYhpB-Sk_Cr3rn7F-2O/p/1drLlquWGR60tr8pUUX25G4bnQiQdJP9M/edit"> <img class="iconos" src="assets/icon/4.eduLAB/3.GuiaDidactica.png" alt=""></a>
-              <ion-input placeholder="Guía Didáctica"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="bancoImagenes">
-            <a href="https://sites.google.com/d/1A29MO9Wvd6Y3dlvPA__7vWmtMMLqQvRZ/p/1BTU1ytYOPypfXmcaxX1IkKxqLXbE3L4x/edit"> <img class="iconos" src="assets/icon/4.eduLAB/4.ImagenesLibres.png" alt=""></a>
-            <ion-input placeholder="Bancos Imágenes Libres"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="kitMontaje">
-              <a href="https://docs.google.com/document/d/1rvktIcN6ShOBcV88zHcl2HmnZjh5p1LVB-sHsDrFkRM/edit"> <img class="iconos" src="assets/icon/4.eduLAB/5.KitMontajeCursos.png" alt=""></a>
-              <ion-input placeholder="Kit para Montaje Cursos"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="BienestarUniversitario">
-            <a href="https://www.uniquindio.edu.co/bienestar/"><img class="iconos" src="assets/icon/6.BienestarUniversitario.png" alt=""></a>
-            <ion-input placeholder="Bienestar Universitario"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="normativa">
-              <a href="https://www.uniquindio.edu.co/publicaciones/408/normatividad-institucional/"><img class="iconos" src="assets/icon/8.Normativa/0.Normativa.png" alt=""></a>
-              <ion-input placeholder="Normativa"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="youtube">
-            <a href="https://www.youtube.com/channel/UC46RMqZYV9dG2LOgBnu3iNA"> <img class="iconos" src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt=""></a>
-            <ion-input placeholder="Youtube"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="facebook">
-              <a href="https://web.facebook.com/FacultadCienciasSaludUQ/?_rdc=1&_rdr"> <img class="iconos" src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png" alt=""></a>
-              <ion-input placeholder="Facebook"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="googleMaps">
-            <a href="https://www.google.com/maps/d/u/1/edit?hl=es&mid=1wyXBr9TmVo9T-XfSQKn3kwWwwVLoarJW&ll=4.556184712181709%2C-75.6588284114789&z=20"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-            <ion-input placeholder="Google Map"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="portalUQ">
-              <a href="https://www.uniquindio.edu.co/"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-              <ion-input placeholder="Portal Web UQ "></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="directorio">
-            <a href="https://www.uniquindio.edu.co/directorio/"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-            <ion-input placeholder="Directorio"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row >
-        <ion-col>
-          <div class="tablero" id="eventos">
-              <a href="https://noticias2020.uniquindio.edu.co/category/obliga/eventos/"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-              <ion-input placeholder="Eventos"></ion-input>
-              <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-        <ion-col >
-          <div class="tablero" id="mosaicos">
-            <a href="https://drive.google.com/drive/folders/1NNmCZ3-T7PG6pbU4toUhG30xpD8xxfDF?usp=sharing"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-            <ion-input placeholder="Mosaicos"></ion-input>
-            <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="sac">
+          <a href="https://enlinea.uniquindio.edu.co/enlinea/#!/categories"> <img class="iconos"
+              src="assets/icon/1.ServiciosAcademicos/2.SAC.png" alt=""></a>
+          <ion-input placeholder="SAC" type="text" [(ngModel)]="sac" name="sac"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarSac()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="csu">
+          <a href="https://csu.uniquindio.edu.co/helppeople/Administracion/usuarios/Formulario.aspx"> <img
+              class="iconos" src="assets/icon/1.ServiciosAcademicos/5.CSU.png" alt=""></a>
+          <ion-input placeholder="CSU"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="campus_virtual">
+          <a href="https://www.uniquindio.edu.co/campus_virtual/"> <img class="iconos"
+              src="assets/icon/1.ServiciosAcademicos/4.Campus-Virtual.png" alt=""></a>
+          <ion-input placeholder="Campus Virtual"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="aulas_virtuales">
+          <a href="https://aulasvirtuales.uniquindio.edu.co/login/index.php"> <img class="iconos"
+              src="assets/icon/1.ServiciosAcademicos/3.AulasVirtuales.png" alt=""></a>
+          <ion-input placeholder="Aulas Virtuales"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="SST">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/313/seguridad-y-salud-en-el-trabajo/"> <img
+              class="iconos" src="assets/icon/2.ProgramasAcademicos/1.SST.png" alt=""></a>
+          <ion-input placeholder="SST"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="gerontologia">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/315/gerontologia/"> <img class="iconos"
+              src="assets/icon/2.ProgramasAcademicos/2.Gerontologia.png" alt=""></a>
+          <ion-input placeholder="Gerontología"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="enfermeria">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/314/enfermeria/"> <img class="iconos"
+              src="assets/icon/2.ProgramasAcademicos/3.Enfermeria.png" alt=""></a>
+          <ion-input placeholder="Enfermeria"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="medicina">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/"> <img class="iconos"
+              src="assets/icon/2.ProgramasAcademicos/4.Medicina.png" alt=""></a>
+          <ion-input placeholder="Medicina"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="ePediatria">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/349/especializacion-en-pediatria/"> <img
+              class="iconos" src="assets/icon/2.ProgramasAcademicos/6.EspecializacionenPediatria.png" alt=""></a>
+          <ion-input placeholder="E. Pediatría"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="mRiesgosLaborales">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/"> <img class="iconos"
+              src="assets/icon/2.ProgramasAcademicos/7.MaestriaenCienciasBiomedicas.png" alt=""></a>
+          <ion-input placeholder="M. Riesgos Laborales"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="maestriaenCienciasBiomedicas">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/349/especializacion-en-pediatria/"> <img
+              class="iconos" src="assets/icon/2.ProgramasAcademicos/6.EspecializacionenPediatria.png" alt=""></a>
+          <ion-input placeholder="M. Ciencias Biomédicas"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="doctoradoEnCienciasBiomedicas">
+          <a href="https://www.uniquindio.edu.co/programas/publicaciones/312/medicina/"> <img class="iconos"
+              src="assets/icon/2.ProgramasAcademicos/7.MaestriaenCienciasBiomedicas.png" alt=""></a>
+          <ion-input placeholder="D. Ciencias Biomédicas"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="bilbiotecaCRAI">
+          <a href="https://library.uniquindio.edu.co/"> <img class="iconos"
+              src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt=""></a>
+          <ion-input placeholder="Biblioteca CRAI"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="bibliotecaFac">
+          <a href="https://library.uniquindio.edu.co/databases#faccienciasdelasalud"> <img class="iconos"
+              src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png" alt=""></a>
+          <ion-input placeholder="Biblioteca Facultad "></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="contactoCRAI">
+          <a
+            href="https://api.whatsapp.com/send?phone=573103106996&text=Hola,%20necesito%20tu%20asesor%C3%ADa%20por%20favor%20%F0%9F%A4%93">
+            <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+          <ion-input placeholder="Contacto CRAI"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="proyectosExtension">
+          <a href=""> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png" alt=""></a>
+          <ion-input placeholder="Proyectos de Extensión"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="convocatorias">
+          <a href=""> <img class="iconos" src="assets/icon/5.Extension/2.Convocatorias.png" alt=""></a>
+          <ion-input placeholder="Convocatorias"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="bolsaEmpleo">
+          <a href=""> <img class="iconos" src="assets/icon/5.Extension/3.BolsaDeEmpleo.png" alt=""></a>
+          <ion-input placeholder="Bolsa de Empleo"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="CLIL">
+          <a href="https://youtube.com/playlist?list=PLt4rG0DW9nHMpCq7zIP3Qz681B7-Xpr8a"> <img class="iconos"
+              src="assets/icon/4.eduLAB/1.CLIL.png" alt=""></a>
+          <ion-input placeholder="CLIL"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="asesoriasEdulab">
+          <a href="https://docs.google.com/forms/d/1q7QkU8vf91pcfxwVKXtdTOIYWS_tldpzxdUEbRo4ZJw/edit"> <img
+              class="iconos" src="assets/icon/4.eduLAB/2.Asesorias.png" alt=""></a>
+          <ion-input placeholder="Asesorías EduLAB"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="guiaDidactica">
+          <a
+            href="https://sites.google.com/d/1G35xEZTE-gboeWYhpB-Sk_Cr3rn7F-2O/p/1drLlquWGR60tr8pUUX25G4bnQiQdJP9M/edit">
+            <img class="iconos" src="assets/icon/4.eduLAB/3.GuiaDidactica.png" alt=""></a>
+          <ion-input placeholder="Guía Didáctica"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="bancoImagenes">
+          <a
+            href="https://sites.google.com/d/1A29MO9Wvd6Y3dlvPA__7vWmtMMLqQvRZ/p/1BTU1ytYOPypfXmcaxX1IkKxqLXbE3L4x/edit">
+            <img class="iconos" src="assets/icon/4.eduLAB/4.ImagenesLibres.png" alt=""></a>
+          <ion-input placeholder="Bancos Imágenes Libres"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="kitMontaje">
+          <a href="https://docs.google.com/document/d/1rvktIcN6ShOBcV88zHcl2HmnZjh5p1LVB-sHsDrFkRM/edit"> <img
+              class="iconos" src="assets/icon/4.eduLAB/5.KitMontajeCursos.png" alt=""></a>
+          <ion-input placeholder="Kit para Montaje Cursos"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="BienestarUniversitario">
+          <a href="https://www.uniquindio.edu.co/bienestar/"><img class="iconos"
+              src="assets/icon/6.BienestarUniversitario.png" alt=""></a>
+          <ion-input placeholder="Bienestar Universitario"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="normativa">
+          <a href="https://www.uniquindio.edu.co/publicaciones/408/normatividad-institucional/"><img class="iconos"
+              src="assets/icon/8.Normativa/0.Normativa.png" alt=""></a>
+          <ion-input placeholder="Normativa"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="youtube">
+          <a href="https://www.youtube.com/channel/UC46RMqZYV9dG2LOgBnu3iNA"> <img class="iconos"
+              src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt=""></a>
+          <ion-input placeholder="Youtube"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="facebook">
+          <a href="https://web.facebook.com/FacultadCienciasSaludUQ/?_rdc=1&_rdr"> <img class="iconos"
+              src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png" alt=""></a>
+          <ion-input placeholder="Facebook"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="googleMaps">
+          <a
+            href="https://www.google.com/maps/d/u/1/edit?hl=es&mid=1wyXBr9TmVo9T-XfSQKn3kwWwwVLoarJW&ll=4.556184712181709%2C-75.6588284114789&z=20">
+            <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+          <ion-input placeholder="Google Map"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="portalUQ">
+          <a href="https://www.uniquindio.edu.co/"> <img class="iconos"
+              src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+          <ion-input placeholder="Portal Web UQ "></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="directorio">
+          <a href="https://www.uniquindio.edu.co/directorio/"> <img class="iconos"
+              src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+          <ion-input placeholder="Directorio"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="eventos">
+          <a href="https://noticias2020.uniquindio.edu.co/category/obliga/eventos/"> <img class="iconos"
+              src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+          <ion-input placeholder="Eventos"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="mosaicos">
+          <a href="https://drive.google.com/drive/folders/1NNmCZ3-T7PG6pbU4toUhG30xpD8xxfDF?usp=sharing"> <img
+              class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+          <ion-input placeholder="Mosaicos"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEnlace()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>
