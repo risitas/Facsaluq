@@ -17,13 +17,13 @@
     </ion-item>
     <ion-item>
       <ion-label position="floating"> Correo electrónico </ion-label>
-      <ion-input type="text" [(ngModel)]="email" name="email" [readonly]="isReadOnly"></ion-input>
+      <ion-input type="text" [(ngModel)]="email" name="email" readonly="true"></ion-input>
     </ion-item>
   </div>
   <ion-button (click)="onSubmitChangeUser()" expand="block">{{botonEditar}}</ion-button>
-  <ion-button  expand="block">{{botonEliminar}}</ion-button>
+  <ion-button (click)="onRemove()" expand="block">Eliminar cuenta</ion-button>
   <div class="ion-text-center ion-margin-top">
-      <a routerLink="/tableroMando" expand="block">Regresar</a>
+    <a href="/tableroMando" expand="block">Regresar</a>
   </div>
 
-  </ion-content>
+</ion-content>

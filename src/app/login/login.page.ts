@@ -29,7 +29,9 @@ export class LoginPage implements OnInit {
         //   console.log("Entre")
         return this.router.navigate(['/tableroMandoAdmin']);
       } else {
+
         return this.router.navigate(['/tableroMando']);
+
       }
 
     }).catch(err => Swal.fire({

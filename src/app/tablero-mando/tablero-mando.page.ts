@@ -30,7 +30,7 @@ export class TableroMandoPage implements OnInit {
 
   }
 
-  async mostarServiciosAcademicos(){
+  async mostarServiciosAcademicos() {
     const modal = await this.modalCtrl.create({
       component: ModalServiciosAcademicosPage,
       componentProps: {
@@ -47,7 +47,7 @@ export class TableroMandoPage implements OnInit {
     return await modal.present();
   }
 
-  async mostarProgramasAcademicos(){
+  async mostarProgramasAcademicos() {
     const modal = await this.modalCtrl.create({
       component: ModalProgramasAcademicosPage
     });
@@ -61,7 +61,7 @@ export class TableroMandoPage implements OnInit {
     return await modal.present();
   }
 
-  async mostarBiblioteca(){
+  async mostarBiblioteca() {
     const modal = await this.modalCtrl.create({
       component: ModalBibliotecaPage
     });
@@ -75,7 +75,7 @@ export class TableroMandoPage implements OnInit {
     return await modal.present();
   }
 
-  async mostarEdulab(){
+  async mostarEdulab() {
     const modal = await this.modalCtrl.create({
       component: ModalEdulabPage
     });
@@ -89,7 +89,7 @@ export class TableroMandoPage implements OnInit {
     return await modal.present();
   }
 
-  async mostarExtension(){
+  async mostarExtension() {
     const modal = await this.modalCtrl.create({
       component: ModalExtensionPage
     });
@@ -102,7 +102,7 @@ export class TableroMandoPage implements OnInit {
     return await modal.present();
   }
 
-  async mostarRedesSociales(){
+  async mostarRedesSociales() {
     const modal = await this.modalCtrl.create({
       component: ModalRedesSocialesPage
     });
@@ -117,8 +117,8 @@ export class TableroMandoPage implements OnInit {
   }
 
 
- 
-  
+
+
 
   onLogout() {
     this.authservice.logout();
