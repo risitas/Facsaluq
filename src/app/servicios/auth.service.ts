@@ -30,7 +30,6 @@ export class AuthService {
       });
     } else {
       Swal.fire({
-        title: '¡Faltan campos por diligenciar!',
         html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">Debe diligenciar todos los campos.</h1>',
         confirmButtonText: 'Confirmar'
       });
@@ -93,8 +92,7 @@ export class AuthService {
 
             if (email === array && this.contador == 0) {
               Swal.fire({
-                title: '¡Correo enviado!',
-                html: '<img class="imagenSwal" src="assets/icon/Personajes/3.registro.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
+                html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
                 confirmButtonText: 'Confirmar'
               })
               this.logout();
@@ -104,7 +102,6 @@ export class AuthService {
           }
           if (this.contador == 0) {
             Swal.fire({
-              title: '¡Usuario no registrado!',
               html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">El correo ' + email + ' que acaba de ingresar no está registrado</h1>',
               confirmButtonText: 'Confirmar'
             });
@@ -114,14 +111,12 @@ export class AuthService {
         });
       } else {
         Swal.fire({
-          title: '¡Correo invalido!',
           html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">Formato de correo invalido, por favor ingrese su correo.</h1>',
           confirmButtonText: 'Confirmar'
         });
       }
     } else {
       Swal.fire({
-        title: '¡Campos sin diligenciar!',
         html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">Por favor ingrese su correo electronico.</h1>',
         confirmButtonText: 'Confirmar'
       })

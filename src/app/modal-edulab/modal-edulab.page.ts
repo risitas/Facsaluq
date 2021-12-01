@@ -18,6 +18,7 @@ export class ModalEdulabPage implements OnInit {
   public linkguiadidactica: string;
   public linkbancosimageneslibres: string;
   public linkkitparamontajecursos: string;
+  public linkproyectotransformacionpedagogica: string;
   public lines = [];
 
   constructor(private modalCtr: ModalController, public activatedRoute: ActivatedRoute, private db: AngularFirestore, private afauth: AngularFireAuth, private router: Router) {
@@ -36,6 +37,7 @@ export class ModalEdulabPage implements OnInit {
       this.linkguiadidactica = this.lines[0].GuiaDidactica;
       this.linkbancosimageneslibres = this.lines[0].BancosImagenesLibres;
       this.linkkitparamontajecursos = this.lines[0].KitparaMontajesCursos;
+      this.linkproyectotransformacionpedagogica = this.lines[0].ProyectoTransformaciónPedagogica
 
     });
 

@@ -68,16 +68,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.sac = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar el link que desea actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -90,16 +88,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.csu = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -112,16 +108,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.campusvirtual = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -134,16 +128,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.asesorias = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -157,16 +149,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.aulasvirtuales = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -180,16 +170,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.bancoimageneslibres = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -203,16 +191,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.bibliotecacrai = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -226,16 +212,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.bibliotecafacultad = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -249,16 +233,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.bienestaruniversitario = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -272,16 +254,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.bolsaempleo = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -295,16 +275,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.clil = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -318,16 +296,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.contactocrai = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -341,16 +317,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.convocatorias = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -364,16 +338,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.directorio = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -387,16 +359,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.doctoradocienciasbiomedicas = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -410,16 +380,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.enfermeria = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -433,16 +401,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.especializacionpediatra = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -456,16 +422,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.eventos = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -479,16 +443,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.facebook = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -502,16 +464,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.gerontologia = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -525,16 +485,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.googlemap = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -548,16 +506,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.guiadidactica = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -571,16 +527,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.kitparamontajescurso = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -594,16 +548,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.maestriacienciasbiomedicas = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -617,16 +569,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.maestriariesgoslaborales = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -640,16 +590,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.medicina = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -663,16 +611,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.mosaico = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -686,16 +632,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.normativa = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -709,16 +653,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.portalwebuq = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -732,16 +674,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.proyectodeextension = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -755,16 +695,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.sst = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }
@@ -778,16 +716,14 @@ export class TableroMandoAdminPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Actualización exitosa!',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
             confirmButtonText: 'Confirmar'
           });
           this.youtube = '';
         });
     } else {
       Swal.fire({
-        title: 'Llenar campos!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
         confirmButtonText: 'Confirmar'
       });
     }

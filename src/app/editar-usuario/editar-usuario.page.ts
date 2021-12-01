@@ -77,8 +77,7 @@ export class EditarUsuarioPage implements OnInit {
     //________//
     if (this.botonEditar === "Editar") {
       Swal.fire({
-        title: 'Editar información',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1> Puedes modificar tus nombres y apellidos. </h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1> Puedes modificar tus nombres y apellidos. </h1>',
         confirmButtonText: 'Confirmar'
       })
       this.isReadOnly = false;
@@ -93,14 +92,12 @@ export class EditarUsuarioPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            title: 'Información Actualizada',
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt=""><h1 class="text"></h1> Actualización realizada con exito. </h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1> Actualización realizada con exito. </h1>',
             confirmButtonText: 'Confirmar'
           })
         })
         .catch((error) => {
           Swal.fire({
-            title: 'La información no se ha podido actualizar',
             html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">La actualización no ha sido exitosa, intentalo de nuevo.</h1>',
             confirmButtonText: 'Confirmar'
           });
@@ -119,7 +116,7 @@ export class EditarUsuarioPage implements OnInit {
   onRemove() {
     //Eliminar un documento
       Swal.fire({
-        html: '<p>¿Está seguro de eliminar su cuenta?</p><img class="imagenSwal" src="assets/icon/Personajes/1.Login.png" alt="">',
+        html: '<p>¿Está seguro de eliminar su cuenta?</p><img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt="">',
         showDenyButton: true,
         confirmButtonText: 'Aceptar',
         denyButtonText: `Cancelar`,
