@@ -37,6 +37,7 @@ export class TableroMandoAdminPage implements OnInit {
   public googlemap: string;
   public guiadidactica: string;
   public kitparamontajescurso: string;
+  public proyectotransformacionpedagogica: string;
   public maestriacienciasbiomedicas: string;
   public maestriariesgoslaborales: string;
   public medicina: string;
@@ -531,6 +532,27 @@ export class TableroMandoAdminPage implements OnInit {
             confirmButtonText: 'Confirmar'
           });
           this.kitparamontajescurso = '';
+        });
+    } else {
+      Swal.fire({
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        confirmButtonText: 'Confirmar'
+      });
+    }
+  }
+
+  actualizarproyectotransformacionpedagogica() {
+
+    if (this.proyectotransformacionpedagogica !== undefined) {
+      this.actualizar.update({
+        ProyectoTransformaciónPedagogica: this.proyectotransformacionpedagogica
+      })
+        .then(() => {
+          Swal.fire({
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            confirmButtonText: 'Confirmar'
+          });
+          this.proyectotransformacionpedagogica = '';
         });
     } else {
       Swal.fire({
