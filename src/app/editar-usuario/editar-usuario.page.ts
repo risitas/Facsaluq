@@ -77,7 +77,7 @@ export class EditarUsuarioPage implements OnInit {
     //________//
     if (this.botonEditar === "Editar") {
       Swal.fire({
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1> Puedes modificar tus nombres y apellidos. </h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/7.ModoEdicionActivado.png" alt=""><h1 class="text"></h1> Puedes modificar tus nombres y apellidos. </h1>',
         confirmButtonText: 'Confirmar'
       })
       this.isReadOnly = false;
@@ -92,7 +92,7 @@ export class EditarUsuarioPage implements OnInit {
       })
         .then(() => {
           Swal.fire({
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1> Actualización realizada con exito. </h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/8.InformacionActualizada.png" alt=""><h1 class="text"></h1> Actualización realizada con exito. </h1>',
             confirmButtonText: 'Confirmar'
           })
         })

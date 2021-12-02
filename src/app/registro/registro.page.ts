@@ -38,7 +38,7 @@ export class RegistroPage implements OnInit {
       if (this.password === this.reppassword) {
         this.auth.register(this.email, this.password, this.nombres, this.apellidos).then(auth => {
           Swal.fire({
-            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El registro se realizó correctamente.</h1>',
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/5.RegistroExitoso.png" alt=""><h1 class="text"></h1>El registro se realizó correctamente.</h1>',
             confirmButtonText: 'Confirmar'
           })
           this.router.navigate(['/tableroMando/']);

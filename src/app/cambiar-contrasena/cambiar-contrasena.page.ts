@@ -40,7 +40,7 @@ export class CambiarContrasenaPage implements OnInit {
 
       //Debe mostrar alerta que se le envio un correo para cambiar la contraseña y que en el momento que vuelva a ingresar, será con la nueva.
       Swal.fire({
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/6.CorreoContrasenia.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
         confirmButtonText: 'Confirmar'
       })
 

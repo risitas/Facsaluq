@@ -92,7 +92,7 @@ export class AuthService {
 
             if (email === array && this.contador == 0) {
               Swal.fire({
-                html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
+                html: '<img class="imagenSwal" src="assets/icon/Personajes/6.CorreoContrasenia.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
                 confirmButtonText: 'Confirmar'
               })
               this.logout();
