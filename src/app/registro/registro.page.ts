@@ -31,10 +31,10 @@ export class RegistroPage implements OnInit {
 
 
   onSubmitRegister() {
-
+    
     let validacion = this.validarCampos(this.nombres, this.apellidos, this.email, this.password, this.reppassword);
 
-    if (validacion === true) {
+    if (validacion[0] === true) {
       if (this.password === this.reppassword) {
         this.auth.register(this.email, this.password, this.nombres, this.apellidos).then(auth => {
           Swal.fire({
@@ -77,11 +77,25 @@ export class RegistroPage implements OnInit {
   }
 
   validarCampos(nombres, apellidos, email, password, reppassword) {
-    let validacion = false;
+    
+    let validacion: boolean[] =[false,true,true];
     if (typeof (this.nombres) !== 'undefined' && typeof (this.apellidos) !== 'undefined' && typeof (this.email) != 'undefined' && typeof (this.password) !== 'undefined' && typeof (this.reppassword) !== 'undefined') {
       if (this.nombres !== '' && this.apellidos !== '' && this.email !== '' && this.password !== '' && this.reppassword !== '') {
-        validacion = true;
+        validacion[0] = true;
       }
+    }
+    let verificacionNombresApellidos= new RegExp (/\[a-zA-ZñÑ ]\./,'i');
+    if(verificacionNombresApellidos.test(this.nombres)===false){
+      validacion[1] = false;
+    }
+
+    if(verificacionNombresApellidos.test(this.apellidos)===false){
+      console.log("Entre apellido")
+      Swal.fire({
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">Los apellidos solo deben contener letras.</h1>',
+        confirmButtonText: 'Confirmar'
+      });;
+      validacion[2] = false;
     }
     return validacion;
   }
