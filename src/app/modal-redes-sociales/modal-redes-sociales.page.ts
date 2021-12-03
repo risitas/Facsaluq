@@ -38,7 +38,6 @@ export class ModalRedesSocialesPage implements OnInit {
       this.linkfacebook = this.lines[0].Facebook;
       this.linkgooglemap = this.lines[0].GoogleMap;
       this.linkportalweb = this.lines[0].PortalWebUQ;
-      this.linkdirectorios = this.lines[0].Directorio;
       this.linkeventos = this.lines[0].Eventos;
       this.linkmosaicos = this.lines[0].Mosaicos;
     });
@@ -52,6 +51,22 @@ export class ModalRedesSocialesPage implements OnInit {
     const modal = await this.modalCtr.getTop();
     if (modal) {
       modal.dismiss();
+    }
+  }
+
+  onChangeDir(opcion: string) {
+    switch (opcion) {
+      case "enfermeria":
+        window.location.href = this.lines[0].DirEnfemeria;
+        break;
+
+      case "medicina":
+        window.location.href = this.lines[0].DirMedicina;
+        break;
+
+      case "dirGeneral":
+        window.location.href = this.lines[0].DirGeneral;
+        break;
     }
   }
 

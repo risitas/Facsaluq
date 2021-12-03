@@ -280,11 +280,29 @@
         </div>
       </ion-col>
       <ion-col>
-        <div class="tablero" id="directorio">
+        <div class="tablero" id="dirEnfermeria">
           <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt="">
-          <ion-input placeholder="Directorio" type="text" [(ngModel)]="directorio" name="directorio">
+          <ion-input placeholder="Directorio Enfermería" type="text" [(ngModel)]="dirEnfermeria" name="directorio">
           </ion-input>
-          <ion-button class="button button-small" (click)="actualizarDirectorio()">Actualizar</ion-button>
+          <ion-button class="button button-small" (click)="actualizarDirEnfermeria()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="dirMedicina">
+          <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt="">
+          <ion-input placeholder="Directorio Medicina" type="text" [(ngModel)]="dirMedicina" name="directorio">
+          </ion-input>
+          <ion-button class="button button-small" (click)="actualizarDirMedicina()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="dirGeneral">
+          <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt="">
+          <ion-input placeholder="Directorio General" type="text" [(ngModel)]="dirGeneral" name="directorio">
+          </ion-input>
+          <ion-button class="button button-small" (click)="actualizarDirGeneral()">Actualizar</ion-button>
         </div>
       </ion-col>
     </ion-row>
@@ -311,6 +329,15 @@
           <ion-input placeholder="Tour Virtual FaCSalUQ" type="text" [(ngModel)]="googlemap" name="googlemap">
           </ion-input>
           <ion-button class="button button-small" (click)="actualizarGoogleMap()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="contactenos">
+          <img class="iconos" src="assets/icon/7.RedesSociales/6.Eventos.png" alt="">
+          <ion-input placeholder="Contáctenos" type="text" [(ngModel)]="contactenos" name="contactenos"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarContactenos()">Actualizar</ion-button>
         </div>
       </ion-col>
     </ion-row>

@@ -27,8 +27,18 @@
   </div>
 
   <div class="tablero" id="aulas_virtuales">
-    <a [href]="linkdirectorios"> <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt=""></a>
-    Directorio
+    <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt="">
+
+    <ion-list class="directorio">
+      <ion-item>
+        <ion-label class="center">Directorio</ion-label>
+        <ion-select value="selectDir" #Dir (ionChange)="onChangeDir(Dir.value)" interface="action-sheet">
+          <ion-select-option value="enfermeria">Enfermería</ion-select-option>
+          <ion-select-option value="medicina">Medicina</ion-select-option>
+          <ion-select-option value="dirGeneral">Directorio General Docentes</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
   </div>
 
   <div class="tablero" id="aulas_virtuales">

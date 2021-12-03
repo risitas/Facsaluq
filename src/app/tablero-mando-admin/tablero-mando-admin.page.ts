@@ -47,6 +47,10 @@ export class TableroMandoAdminPage implements OnInit {
   public proyectodeextension: string;
   public sst: string;
   public youtube: string;
+  public contactenos: string;
+  public dirEnfermeria: string;
+  public dirMedicina: string;
+  public dirGeneral: string;
   public actualizar;
   constructor(public authservice: AuthService, public activatedRoute: ActivatedRoute, private db: AngularFirestore) {
 
@@ -742,6 +746,90 @@ export class TableroMandoAdminPage implements OnInit {
             confirmButtonText: 'Confirmar'
           });
           this.youtube = '';
+        });
+    } else {
+      Swal.fire({
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        confirmButtonText: 'Confirmar'
+      });
+    }
+  }
+
+  actualizarContactenos() {
+
+    if (this.contactenos !== undefined) {
+      this.actualizar.update({
+        Contactenos: this.contactenos
+      })
+        .then(() => {
+          Swal.fire({
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            confirmButtonText: 'Confirmar'
+          });
+          this.contactenos = '';
+        });
+    } else {
+      Swal.fire({
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        confirmButtonText: 'Confirmar'
+      });
+    }
+  }
+
+  actualizarDirGeneral() {
+
+    if (this.dirGeneral !== undefined) {
+      this.actualizar.update({
+        DirGeneral: this.dirGeneral
+      })
+        .then(() => {
+          Swal.fire({
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            confirmButtonText: 'Confirmar'
+          });
+          this.contactenos = '';
+        });
+    } else {
+      Swal.fire({
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        confirmButtonText: 'Confirmar'
+      });
+    }
+  }
+
+  actualizarDirEnfermeria() {
+
+    if (this.dirEnfermeria !== undefined) {
+      this.actualizar.update({
+        DirEnfermeria: this.dirEnfermeria
+      })
+        .then(() => {
+          Swal.fire({
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            confirmButtonText: 'Confirmar'
+          });
+          this.contactenos = '';
+        });
+    } else {
+      Swal.fire({
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        confirmButtonText: 'Confirmar'
+      });
+    }
+  }
+
+  actualizarDirMedicina() {
+
+    if (this.dirMedicina !== undefined) {
+      this.actualizar.update({
+        DirMedicina: this.dirMedicina
+      })
+        .then(() => {
+          Swal.fire({
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            confirmButtonText: 'Confirmar'
+          });
+          this.contactenos = '';
         });
     } else {
       Swal.fire({
