@@ -52,7 +52,6 @@ export class TableroMandoAdminPage implements OnInit {
   public dirMedicina: string;
   public dirGeneral: string;
   public actualizar;
-  public isHidden: boolean = false;
   constructor(public authservice: AuthService, public activatedRoute: ActivatedRoute, private db: AngularFirestore) {
 
     //________________________Leer los datos del documento de Lines y cargarlos__________
