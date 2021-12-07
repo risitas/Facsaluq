@@ -8,6 +8,7 @@ import { ModalBibliotecaPage } from '../modal-biblioteca/modal-biblioteca.page';
 import { ModalEdulabPage } from '../modal-edulab/modal-edulab.page';
 import { ModalExtensionPage } from '../modal-extension/modal-extension.page';
 import { ModalRedesSocialesPage } from '../modal-redes-sociales/modal-redes-sociales.page';
+import { ModalAutoresPage } from '../modal-autores/modal-autores.page';
 
 
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
@@ -141,6 +142,20 @@ export class TableroMandoPage implements OnInit {
   async mostarRedesSociales() {
     const modal = await this.modalCtrl.create({
       component: ModalRedesSocialesPage
+    });
+
+    modal.onDidDismiss().then((modalDataResponse) => {
+      if (modalDataResponse !== null) {
+        this.modalDataResponse = modalDataResponse.data;
+      }
+    });
+
+    return await modal.present();
+  }
+
+  async mostarAutores() {
+    const modal = await this.modalCtrl.create({
+      component: ModalAutoresPage
     });
 
     modal.onDidDismiss().then((modalDataResponse) => {

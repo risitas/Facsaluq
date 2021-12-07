@@ -116,7 +116,7 @@ export class EditarUsuarioPage implements OnInit {
   onRemove() {
     //Eliminar un documento
       Swal.fire({
-        html: '<p>¿Está seguro de eliminar su cuenta?</p><img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt="">',
+        html: '<p>¿Está seguro de eliminar su cuenta?</p><img class="imagenSwal" src="assets/icon/Personajes/10.TeExtranaremos.png" alt="">',
         showDenyButton: true,
         confirmButtonText: 'Aceptar',
         denyButtonText: `Cancelar`,

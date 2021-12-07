@@ -58,7 +58,11 @@ const routes: Routes = [
   {
     path: 'tableroMandoAdmin',
     loadChildren: () => import('./tablero-mando-admin/tablero-mando-admin.module').then(m => m.TableroMandoAdminPageModule)
+  },  {
+    path: 'modal-autores',
+    loadChildren: () => import('./modal-autores/modal-autores.module').then( m => m.ModalAutoresPageModule)
   }
+
 
 
 ];
