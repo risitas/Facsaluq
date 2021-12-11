@@ -41,6 +41,7 @@ export class TableroMandoAdminPage implements OnInit {
   public maestriacienciasbiomedicas: string;
   public maestriariesgoslaborales: string;
   public medicina: string;
+  public preMedico: string;
   public mosaico: string;
   public normativa: string;
   public portalwebuq: string;
@@ -389,6 +390,27 @@ export class TableroMandoAdminPage implements OnInit {
             confirmButtonText: 'Confirmar'
           });
           this.enfermeria = '';
+        });
+    } else {
+      Swal.fire({
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text"></h1>Por favor ingresar un link para actualizar</h1>',
+        confirmButtonText: 'Confirmar'
+      });
+    }
+  }
+
+  actualizarPreMedico() {
+
+    if (this.preMedico !== undefined) {
+      this.actualizar.update({
+        PreMedico: this.preMedico
+      })
+        .then(() => {
+          Swal.fire({
+            html: '<img class="imagenSwal" src="assets/icon/Personajes/transaccionExitosa.png" alt=""><h1 class="text"></h1>El enlace se actualizo correctamente</h1>',
+            confirmButtonText: 'Confirmar'
+          });
+          this.preMedico = '';
         });
     } else {
       Swal.fire({
