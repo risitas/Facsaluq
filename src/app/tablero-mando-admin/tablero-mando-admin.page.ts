@@ -6,7 +6,6 @@ import Swal from 'sweetalert2';
 
 const swal = require('sweetalert2');
 
-
 @Component({
   selector: 'app-tablero-mando-admin',
   templateUrl: './tablero-mando-admin.page.html',

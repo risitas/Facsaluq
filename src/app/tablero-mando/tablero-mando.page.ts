@@ -29,7 +29,7 @@ export class TableroMandoPage implements OnInit {
   public linkbienestaruniversitario: string;
   public linknormativas: string;
   public contador: string;
-  public valor: number;
+  public valor: number = 0;
   public lines = [];
 
   constructor(public modalCtrl: ModalController, public authservice: AuthService, public activatedRoute: ActivatedRoute, private db: AngularFirestore) {
@@ -43,7 +43,9 @@ export class TableroMandoPage implements OnInit {
       const dts: any = doc.data();
       this.lines.push(dts);
 
-      this.valor = this.lines[0].Contador + 1;
+      for (let i = 0; i < this.lines[0]; i++) {
+        console.log(i);
+      }
 
       docRef.update({
         Contador: this.valor

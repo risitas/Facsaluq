@@ -9,7 +9,7 @@ describe('TableroMandoAdminPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TableroMandoAdminPage ],
+      declarations: [TableroMandoAdminPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
