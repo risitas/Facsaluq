@@ -54,7 +54,7 @@ export class ModalProgramasAcademicosPage implements OnInit {
         break;
 
       case "preMedico":
-        window.location.href = this.lines[0].Premedico;
+        window.location.href = this.lines[0].PreMedico;
         break;
     }
   }
