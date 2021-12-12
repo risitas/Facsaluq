@@ -38,6 +38,27 @@ export class TableroMandoPage implements OnInit {
 
   constructor(public modalCtrl: ModalController, public authservice: AuthService, public activatedRoute: ActivatedRoute, private db: AngularFirestore) {
 
+    //________________________Leer los datos del documento de Lines y cargarlos__________
+    let docRef = this.db.collection('Link').doc('Idlink');
+
+
+    docRef.get().toPromise().then((doc) => {
+
+      const dts: any = doc.data();
+      this.lines.push(dts);
+
+      this.valor = this.lines[0].Contador + 1;
+
+      docRef.update({
+        Contador: this.valor
+      })
+
+      this.contador = this.lines[0].Contador;
+      this.linkcontactenos = this.lines[0].Contactenos;
+      this.linkbienestaruniversitario = this.lines[0].BienestarUniversitario;
+      this.linknormativas = this.lines[0].Normativa;
+
+    });
 
 
     //Este es el método para sabaer el registro de usuarios que existe
@@ -52,10 +73,11 @@ export class TableroMandoPage implements OnInit {
       }
       //Esta variable contador es la que se pone en el html
       this.contadorU = this.valorU + '';
-      console.log(this.valorU, 'ggggg');
+
 
     });
 
+    
   }
 
   ngOnInit() {
