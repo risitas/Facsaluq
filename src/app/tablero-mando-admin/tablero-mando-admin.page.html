@@ -2,7 +2,7 @@
   <ion-toolbar color="primary">
 
     <ion-buttons slot="start">
-      <ion-menu-button menu="menu" aria-hidden="false"></ion-menu-button>
+      <ion-menu-button menu="menu" aria-hidden="false" cache-view="false"></ion-menu-button>
     </ion-buttons>
 
     <ion-title class="center">Inicio</ion-title>
@@ -93,6 +93,13 @@
     </ion-row>
     <ion-row>
       <ion-col>
+        <div class="tablero" id="preMedico">
+          <img class="iconos" src="assets/icon/2.ProgramasAcademicos/4.Medicina.png" alt="">
+          <ion-input placeholder="preMedico" type="text" [(ngModel)]="preMedico" name="preMedico"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarPreMedico()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
         <div class="tablero" id="ePediatria">
           <img class="iconos" src="assets/icon/2.ProgramasAcademicos/6.EspecializacionenPediatria.png" alt="">
           <ion-input placeholder="E. Pediatría" type="text" [(ngModel)]="especializacionpediatra"
@@ -101,6 +108,8 @@
           <ion-button class="button button-small" (click)="actualizarEspecializacionPediatra()">Actualizar</ion-button>
         </div>
       </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col>
         <div class="tablero" id="mRiesgosLaborales">
           <img class="iconos" src="assets/icon/2.ProgramasAcademicos/7.MaestriaenCienciasBiomedicas.png" alt="">
@@ -110,8 +119,6 @@
           <ion-button class="button button-small" (click)="actualizarMaestriaRiesgosLaborales()">Actualizar</ion-button>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col>
         <div class="tablero" id="maestriaenCienciasBiomedicas">
           <img class="iconos" src="assets/icon/2.ProgramasAcademicos/6.EspecializacionenPediatria.png" alt="">
@@ -121,6 +128,8 @@
           </ion-button>
         </div>
       </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col>
         <div class="tablero" id="doctoradoEnCienciasBiomedicas">
           <img class="iconos" src="assets/icon/2.ProgramasAcademicos/7.MaestriaenCienciasBiomedicas.png" alt="">
@@ -130,8 +139,6 @@
           </ion-button>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col>
         <div class="tablero" id="bilbiotecaCRAI">
           <img class="iconos" src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt="">
@@ -140,6 +147,8 @@
           <ion-button class="button button-small" (click)="actualizarBibliotecaCrai()">Actualizar</ion-button>
         </div>
       </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col>
         <div class="tablero" id="bibliotecaFac">
           <img class="iconos" src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png" alt="">
@@ -149,8 +158,6 @@
           <ion-button class="button button-small" (click)="actualizarBibliotecaFacultad()">Actualizar</ion-button>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col>
         <div class="tablero" id="contactoCRAI">
           <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt="">
@@ -159,6 +166,8 @@
           <ion-button class="button button-small" (click)="actualizarContactoCrai()">Actualizar</ion-button>
         </div>
       </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col>
         <div class="tablero" id="proyectosExtension">
           <a href=""> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png" alt=""></a>
@@ -167,8 +176,6 @@
           <ion-button class="button button-small" (click)="actualizarProyectodeExtension()">Actualizar</ion-button>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col>
         <div class="tablero" id="convocatorias">
           <a href=""> <img class="iconos" src="assets/icon/5.Extension/2.Convocatorias.png" alt=""></a>
@@ -177,6 +184,8 @@
           <ion-button class="button button-small" (click)="actualizarConvocatorias()">Actualizar</ion-button>
         </div>
       </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col>
         <div class="tablero" id="bolsaEmpleo">
           <a href=""> <img class="iconos" src="assets/icon/5.Extension/3.BolsaDeEmpleo.png" alt=""></a>
@@ -185,14 +194,14 @@
           <ion-button class="button button-small" (click)="actualizarBolsadeEmpleo()">Actualizar</ion-button>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col>
         <div class="tablero" id="CLIL"><img class="iconos" src="assets/icon/4.eduLAB/1.CLIL.png" alt="">
           <ion-input placeholder="CLIL" type="text" [(ngModel)]="clil" name="clil"></ion-input>
           <ion-button class="button button-small" (click)="actualizarCLiL()">Actualizar</ion-button>
         </div>
       </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col>
         <div class="tablero" id="asesoriasEdulab">
           <img class="iconos" src="assets/icon/4.eduLAB/2.Asesorias.png" alt="">
@@ -200,8 +209,6 @@
           <ion-button class="button button-small" (click)="actualizarAsesorias()">Actualizar</ion-button>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col>
         <div class="tablero" id="guiaDidactica">
           <img class="iconos" src="assets/icon/4.eduLAB/3.GuiaDidactica.png" alt="">
@@ -210,6 +217,8 @@
           <ion-button class="button button-small" (click)="actualizarGuiaDidactica()">Actualizar</ion-button>
         </div>
       </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col>
         <div class="tablero" id="bancoImagenes">
           <img class="iconos" src="assets/icon/4.eduLAB/4.ImagenesLibres.png" alt="">
@@ -218,8 +227,6 @@
           <ion-button class="button button-small" (click)="actualizarBancoImagenesLibres()">Actualizar</ion-button>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col>
         <div class="tablero" id="kitMontaje">
           <img class="iconos" src="assets/icon/4.eduLAB/5.KitMontajeCursos.png" alt="">
@@ -228,6 +235,26 @@
           <ion-button class="button button-small" (click)="actualizarKitparaMontajesCursos()">Actualizar</ion-button>
         </div>
       </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="proyectoTransformacionPedagogica">
+          <img class="iconos" src="assets/icon/4.eduLAB/6.ProyectoTransformacionPedagogica.png" alt="">
+          <ion-input placeholder="Transformación Pedagógica" type="text" [(ngModel)]="proyectotransformacionpedagogica"
+            name="proyectotransformacionpedagogica"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarproyectotransformacionpedagogica()">Actualizar
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="normativa">
+          <img class="iconos" src="assets/icon/8.Normativa/0.Normativa.png" alt="">
+          <ion-input placeholder="Normativa" type="text" [(ngModel)]="normativa" name="normativa"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarNormativa()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col>
         <div class="tablero" id="BienestarUniversitario">
           <img class="iconos" src="assets/icon/6.BienestarUniversitario.png" alt="">
@@ -236,18 +263,9 @@
           <ion-button class="button button-small" (click)="actualizarBienestarUniversitario()">Actualizar</ion-button>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="tablero" id="normativa">
-          <img class="iconos" src="assets/icon/8.Normativa/0.Normativa.png" alt="">
-          <ion-input placeholder="Normativa" type="text" [(ngModel)]="normativa" name="normativa"></ion-input>
-          <ion-button class="button button-small" (click)="actualizarNormativa()">Actualizar</ion-button>
-        </div>
-      </ion-col>
       <ion-col>
         <div class="tablero" id="youtube">
-          <img class="iconos" src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt="">
+          <img class="iconos" src="assets/icon/7.RedesSociales/1.Youtube.png" alt="">
           <ion-input placeholder="Youtube" type="text" [(ngModel)]="youtube" name="youtube"></ion-input>
           <ion-button class="button button-small" (click)="actualizarYoutube()">Actualizar</ion-button>
         </div>
@@ -256,15 +274,67 @@
     <ion-row>
       <ion-col>
         <div class="tablero" id="facebook">
-          <img class="iconos" src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png" alt="">
+          <img class="iconos" src="assets/icon/7.RedesSociales/2.Facebook.png" alt="">
           <ion-input placeholder="Facebook" type="text" [(ngModel)]="facebook" name="facebook"></ion-input>
           <ion-button class="button button-small" (click)="actualizarFacebook()">Actualizar</ion-button>
         </div>
       </ion-col>
       <ion-col>
+        <div class="tablero" id="portalUQ">
+          <img class="iconos" src="assets/icon/7.RedesSociales/4.PortalWeb.png" alt="">
+          <ion-input placeholder="Portal Web UQ " type="text" [(ngModel)]="portalwebuq" name="portalwebuq">
+          </ion-input>
+          <ion-button class="button button-small" (click)="actualizarPortalWebUQ()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="dirEnfermeria">
+          <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt="">
+          <ion-input placeholder="Directorio Enfermería" type="text" [(ngModel)]="dirEnfermeria" name="directorio">
+          </ion-input>
+          <ion-button class="button button-small" (click)="actualizarDirEnfermeria()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="dirMedicina">
+          <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt="">
+          <ion-input placeholder="Directorio Medicina" type="text" [(ngModel)]="dirMedicina" name="directorio">
+          </ion-input>
+          <ion-button class="button button-small" (click)="actualizarDirMedicina()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="dirGeneral">
+          <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt="">
+          <ion-input placeholder="Directorio General" type="text" [(ngModel)]="dirGeneral" name="directorio">
+          </ion-input>
+          <ion-button class="button button-small" (click)="actualizarDirGeneral()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="tablero" id="eventos">
+          <img class="iconos" src="assets/icon/7.RedesSociales/6.Eventos.png" alt="">
+          <ion-input placeholder="Eventos" type="text" [(ngModel)]="eventos" name="eventos"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarEventos()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero" id="mosaicos">
+          <img class="iconos" src="assets/icon/7.RedesSociales/7.Mosaicos.png" alt="">
+          <ion-input placeholder="Mosaicos" type="text" [(ngModel)]="mosaico" name="mosaico"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarMosaicos()">Actualizar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
         <div class="tablero" id="googleMaps">
-          <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt="">
-          <ion-input placeholder="Google Map" type="text" [(ngModel)]="googlemap" name="googlemap">
+          <img class="iconos" src="assets/icon/7.RedesSociales/3.GoogleMap.png" alt="">
+          <ion-input placeholder="Tour Virtual FaCSalUQ" type="text" [(ngModel)]="googlemap" name="googlemap">
           </ion-input>
           <ion-button class="button button-small" (click)="actualizarGoogleMap()">Actualizar</ion-button>
         </div>
@@ -272,36 +342,13 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <div class="tablero" id="portalUQ">
-          <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt="">
-          <ion-input placeholder="Portal Web UQ " type="text" [(ngModel)]="portalwebuq" name="portalwebuq">
-          </ion-input>
-          <ion-button class="button button-small" (click)="actualizarPortalWebUQ()">Actualizar</ion-button>
+        <div class="tablero" id="contactenos">
+          <img class="iconos" src="assets/icon/7.RedesSociales/6.Eventos.png" alt="">
+          <ion-input placeholder="Contáctenos" type="text" [(ngModel)]="contactenos" name="contactenos"></ion-input>
+          <ion-button class="button button-small" (click)="actualizarContactenos()">Actualizar</ion-button>
         </div>
-      </ion-col>
-      <ion-col>
-        <div class="tablero" id="directorio">
-          <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt="">
-          <ion-input placeholder="Directorio" type="text" [(ngModel)]="directorio" name="directorio">
-          </ion-input>
-          <ion-button class="button button-small" (click)="actualizarDirectorio()">Actualizar</ion-button>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="tablero" id="eventos">
-          <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt="">
-          <ion-input placeholder="Eventos" type="text" [(ngModel)]="eventos" name="eventos"></ion-input>
-          <ion-button class="button button-small" (click)="actualizarEventos()">Actualizar</ion-button>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="tablero" id="mosaicos">
-          <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt="">
-          <ion-input placeholder="Mosaicos" type="text" [(ngModel)]="mosaico" name="mosaico"></ion-input>
-          <ion-button class="button button-small" (click)="actualizarMosaicos()">Actualizar</ion-button>
-        </div>
+        <br>
+        <p class="textContador"><strong> Interacciones en FaCSalUQ: {{contador}} </strong></p>
       </ion-col>
     </ion-row>
   </ion-grid>

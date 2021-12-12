@@ -40,15 +40,13 @@ export class CambiarContrasenaPage implements OnInit {
 
       //Debe mostrar alerta que se le envio un correo para cambiar la contraseña y que en el momento que vuelva a ingresar, será con la nueva.
       Swal.fire({
-        title: '¡Correo enviado!',
-        html: '<img class="imagenSwal" src="assets/icon/Personajes/3.registro.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
+        html: '<img class="imagenSwal" src="assets/icon/Personajes/6.CorreoContrasenia.png" alt=""><h1 class="text">El envio del correo fue exítoso. Verifique su bandeja de entrada para restablecer su contraseña.</h1>',
         confirmButtonText: 'Confirmar'
       })
 
     } else {
       //Debe mostrar una notificación que el correo ingresado es incorrecto.
       Swal.fire({
-        title: '¡Correo invalido!',
         html: '<img class="imagenSwal" src="assets/icon/Personajes/2.Error.png" alt=""><h1 class="text">El correo electrónico que ingreso no coincide con su usuario.</h1>',
         confirmButtonText: 'Confirmar'
       });

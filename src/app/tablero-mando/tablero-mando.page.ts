@@ -8,6 +8,7 @@ import { ModalBibliotecaPage } from '../modal-biblioteca/modal-biblioteca.page';
 import { ModalEdulabPage } from '../modal-edulab/modal-edulab.page';
 import { ModalExtensionPage } from '../modal-extension/modal-extension.page';
 import { ModalRedesSocialesPage } from '../modal-redes-sociales/modal-redes-sociales.page';
+import { ModalAutoresPage } from '../modal-autores/modal-autores.page';
 
 
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
@@ -28,35 +29,32 @@ export class TableroMandoPage implements OnInit {
   profile: string;
   public linkbienestaruniversitario: string;
   public linknormativas: string;
+  public linkcontactenos: string;
   public contador: string;
-  public valor: number = 0;
+  public contadorU: string;
+  public valor: number;
+  public valorU: number = 1;
   public lines = [];
 
   constructor(public modalCtrl: ModalController, public authservice: AuthService, public activatedRoute: ActivatedRoute, private db: AngularFirestore) {
 
-    //________________________Leer los datos del documento de Lines y cargarlos__________
-    let docRef = this.db.collection('Link').doc('Idlink');
 
 
-    docRef.get().toPromise().then((doc) => {
+    //Este es el método para sabaer el registro de usuarios que existe
 
-      const dts: any = doc.data();
-      this.lines.push(dts);
+    const lectura = this.db.collection('users').get().toPromise();
+    lectura.then(res => {
+      const document = res.docs;
+      for (let object of document) {
+        // la variable valor es la que esta publica así: public valor: number = 1;
+        this.valorU++;
 
-      for (let i = 0; i < this.lines[0]; i++) {
-        console.log(i);
       }
-
-      docRef.update({
-        Contador: this.valor
-      })
-
-      this.linkbienestaruniversitario = this.lines[0].BienestarUniversitario;
-      this.linknormativas = this.lines[0].Normativa;
-      this.contador = this.lines[0].Contador;
+      //Esta variable contador es la que se pone en el html
+      this.contadorU = this.valorU + '';
+      console.log(this.valorU, 'ggggg');
 
     });
-
 
   }
 
@@ -141,6 +139,20 @@ export class TableroMandoPage implements OnInit {
   async mostarRedesSociales() {
     const modal = await this.modalCtrl.create({
       component: ModalRedesSocialesPage
+    });
+
+    modal.onDidDismiss().then((modalDataResponse) => {
+      if (modalDataResponse !== null) {
+        this.modalDataResponse = modalDataResponse.data;
+      }
+    });
+
+    return await modal.present();
+  }
+
+  async mostarAutores() {
+    const modal = await this.modalCtrl.create({
+      component: ModalAutoresPage
     });
 
     modal.onDidDismiss().then((modalDataResponse) => {

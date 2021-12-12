@@ -7,37 +7,47 @@
 <ion-content>
 
   <div class="tablero">
-    <a [href]="linkyoutube"> <img class="iconos" src="assets/icon/3.Biblioteca/1.BibliotecaCRAI.png" alt=""></a>
+    <a [href]="linkyoutube"> <img class="iconos" src="assets/icon/7.RedesSociales/1.Youtube.png" alt=""></a>
     Youtube
   </div>
 
   <div class="tablero" id="csu">
-    <a [href]="linkfacebook"> <img class="iconos" src="assets/icon/3.Biblioteca/3.BibliotecaFacultad.png" alt=""></a>
+    <a [href]="linkfacebook"> <img class="iconos" src="assets/icon/7.RedesSociales/2.Facebook.png" alt=""></a>
     Facebook
   </div>
 
   <div class="tablero" id="aulas_virtuales">
-    <a [href]="linkgooglemap"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-    Google Map
+    <a [href]="linkgooglemap"> <img class="iconos" src="assets/icon/7.RedesSociales/3.GoogleMap.png" alt=""></a>
+    Tour Virtual FaCSalUQ
   </div>
 
   <div class="tablero" id="aulas_virtuales">
-    <a [href]="linkportalweb"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+    <a [href]="linkportalweb"> <img class="iconos" src="assets/icon/7.RedesSociales/4.PortalWeb.png" alt=""></a>
     Portal Web UQ
   </div>
 
   <div class="tablero" id="aulas_virtuales">
-    <a [href]="linkdirectorios"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
-    Directorio
+    <img class="iconos" src="assets/icon/7.RedesSociales/5.Directorio.png" alt="">
+
+    <ion-list class="directorio">
+      <ion-item>
+        <ion-label class="center">Directorio</ion-label>
+        <ion-select value="selectDir" #Dir (ionChange)="onChangeDir(Dir.value)" interface="action-sheet">
+          <ion-select-option value="enfermeria">Enfermería</ion-select-option>
+          <ion-select-option value="medicina">Medicina</ion-select-option>
+          <ion-select-option value="dirGeneral">Directorio General Docentes</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
   </div>
 
   <div class="tablero" id="aulas_virtuales">
-    <a [href]="linkeventos"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+    <a [href]="linkeventos"> <img class="iconos" src="assets/icon/7.RedesSociales/6.Eventos.png" alt=""></a>
     Eventos
   </div>
 
   <div class="tablero" id="aulas_virtuales">
-    <a [href]="linkmosaicos"> <img class="iconos" src="assets/icon/3.Biblioteca/2.ContactoCRAI.png" alt=""></a>
+    <a [href]="linkmosaicos"> <img class="iconos" src="assets/icon/7.RedesSociales/7.Mosaicos.png" alt=""></a>
     Mosaicos
   </div>
 

@@ -6,16 +6,16 @@
 
 <ion-content padding>
 
-  <img class="icon" src="../assets/icon/Personajes/1.Login.png" alt="">
-
+  <img class="icon" src="../assets/icon/Personajes/5.OlvidoContrasenia.png" alt="">
+  <br>
   <form class="ion-padding-top" (submit)="resetMyPass()">
 
-    <div class="dato">
+    <div class="dato padding">
       <label> Escribe tu <b>correo electrónico</b>, para enviarte las instrucciones para crear una <b>nueva contraseña
           en Facsaluq.</b>.
       </label>
     </div>
-
+    <br>
     <ion-item class="ion-margin-bottom dato">
       <ion-input type="text" [(ngModel)]="email" placeholder="Ingrese su correo electrónico" name="email"></ion-input>
     </ion-item>
@@ -25,4 +25,6 @@
   <div class="ion-text-center ion-margin-top">
     <a href="/login" expand="block"> Quiero loguearme</a>
   </div>
+  <br>
+  <br>
 </ion-content>

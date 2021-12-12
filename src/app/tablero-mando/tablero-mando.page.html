@@ -87,9 +87,29 @@
           Normativa
         </div>
       </ion-col>
+      <ion-col>
+        <div class="tablero">
+          <a [href]="linkcontactenos"><img class="iconos" src="assets/icon/9.Contacto.png" alt=""></a>
+          Contáctenos
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="tablero">
+          <img class="iconos" src="assets/icon/10.Autores.png" alt="" (click)="mostarAutores()">
+          Autores
+        </div>
+      </ion-col>
     </ion-row>
   </ion-grid>
   <div>
-    <p class="textContador"> Usuarios que han interactuado en FaCSalUQ: {{contador}} </p>
+    <br>
+    <p class="textContador"><strong> Usuarios registrados: {{contadorU}} </strong></p>
+  </div>
+  <div>
+    <br>
+    <img class="imgTransicion" src="assets/icon/transicion.png" alt="">
+    <br>
   </div>
 </ion-content>
