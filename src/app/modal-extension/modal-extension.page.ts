@@ -4,6 +4,9 @@ import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import Swal from 'sweetalert2';
+
+const swal = require('sweetalert2');
 
 
 @Component({
@@ -38,6 +41,13 @@ export class ModalExtensionPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  mostarEducate(){
+    Swal.fire({
+      html: '<img class="imagenSwal" src="assets/icon/mascota.png" alt=""><h1 class="text"></h1>En este espacio Uniquindiano como población general tendrán la oportunidad de interactuar con profesores y estudiantes de los cuatro programas de pregrado de la factultad, hacer sus preguntas sobre salud (Medicina, Enfermeria, Gerontologia y seguridad -salud en el trabajo), asi como también acceder a videos educativos que le van a servir para mejorar sus conocimientos y cuidado en salud.</h1>',
+      confirmButtonText: 'Confirmar'
+    })
   }
 
   async regresar() {

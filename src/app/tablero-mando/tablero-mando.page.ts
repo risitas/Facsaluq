@@ -14,6 +14,7 @@ import { ModalAutoresPage } from '../modal-autores/modal-autores.page';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import Swal from 'sweetalert2';
 
 const swal = require('sweetalert2');
 
@@ -84,6 +85,13 @@ export class TableroMandoPage implements OnInit {
 
     this.profile = this.activatedRoute.snapshot.paramMap.get("profile")
 
+  }
+
+  mostarProduccion(){
+    Swal.fire({
+      html: '<img class="imagenSwal" src="assets/icon/mascota.png" alt=""><h1 class="text"></h1>En este espacio Uniquindianos y población general podrán acceder a todas las producción propias bibliográficas de profesores y estudiantes que sirvan de consulta permanente.</h1>',
+      confirmButtonText: 'Confirmar'
+    })
   }
 
   async mostarServiciosAcademicos() {
