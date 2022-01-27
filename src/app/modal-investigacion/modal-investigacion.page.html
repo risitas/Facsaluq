@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <h3 class="text"><strong>Programas Académicos</strong></h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid id="panel_principal">
+    <ion-row >
+      <ion-col id="centroInvestigacion">
+        <div class="tablero" >
+          <strong>Centros de Investigación</strong>
+          <br>
+          <br>
+         <img class="iconos" src="assets/icon/2.ProgramasAcademicos/1.Pregrado.png" alt=""> 
+         <ion-list>
+          <ion-item>
+            <ion-label>Opciones</ion-label>
+            <ion-select value="selectCentroInvestigacion" #CentroInvestigacion (ionChange)="onChangeCentroInvestigacion(CentroInvestigacion.value)" interface="action-sheet">
+              <ion-select-option value="centroInvestigacion">Centro de Investigaciones Biomédicas “Manuel Elkin Patarroyo Murillo”</ion-select-option>
+             </ion-select>
+          </ion-item>
+        </ion-list>
+        </div>
+      </ion-col>
+      <ion-col >
+        <div class="tablero" id="postgrado">
+          <strong>Grupos de Investigación</strong>
+          <br>
+          <br>
+          <img class="iconos" src="assets/icon/2.ProgramasAcademicos/5.Posgrado.png" alt="">
+          <ion-list>
+            <ion-item>
+              <ion-label>Opciones</ion-label>
+              <ion-select value="selectPostgrado" #GruposInvestigacion (ionChange)="onChangeGruposInvestigacion(GruposInvestigacion.value)" interface="action-sheet">
+                <ion-select-option value="GRIEEQ">GRIEEQ</ion-select-option>
+                <ion-select-option value="GIAP">GIAP</ion-select-option>
+                <ion-select-option value="GEPAMOL">GEPAMOL</ion-select-option>
+                <ion-select-option value="GYMOL">GYMOL</ion-select-option>
+                <ion-select-option value="GECAVYME">GECAVYME</ion-select-option>
+                <ion-select-option value="SaludPublica">Salud Publica</ion-select-option>
+                <ion-select-option value="Biomicromol">Biomicromol</ion-select-option>
+                <ion-select-option value="InvestigacionClinica">Investigación Clínica</ion-select-option>
+                <ion-select-option value="GIPRL">GIPRL</ion-select-option>
+                <ion-select-option value="GIEST">GIEST</ion-select-option>
+                <ion-select-option value="GID">GID</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  <div class="tablero">
+    <a [href]="linkconvocatorias"> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png"
+        alt=""></a>
+    Convocatorias
+  </div> 
+  <div class="tablero">
+    <a [href]="linksemilleros"> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png"
+        alt=""></a>
+    Semilleros
+  </div> 
+  <div class="tablero">
+    <a [href]="linkredesInvestigacion"> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png"
+        alt=""></a>
+    Redes de Investigación
+  </div> 
+  <div class="tablero">
+    <a [href]="linkvicerrectoriaInvestigacion"> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png"
+        alt=""></a>
+    Vicerrectoría de investigación
+  </div> 
+  <div class="tablero">
+    <a [href]="linkminCiencia"> <img class="iconos" src="assets/icon/5.Extension/1.ProyectosdeExtension.png"
+        alt=""></a>
+    Minciencias
+  </div> 
+  <ion-button (click)="regresar()" expand="block">Regresar</ion-button>
+</ion-content>
+

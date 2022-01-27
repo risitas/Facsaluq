@@ -9,6 +9,7 @@ import { ModalEdulabPage } from '../modal-edulab/modal-edulab.page';
 import { ModalExtensionPage } from '../modal-extension/modal-extension.page';
 import { ModalRedesSocialesPage } from '../modal-redes-sociales/modal-redes-sociales.page';
 import { ModalAutoresPage } from '../modal-autores/modal-autores.page';
+import { ModalInvestigacionPage } from '../modal-investigacion/modal-investigacion.page';
 
 
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
@@ -194,7 +195,19 @@ export class TableroMandoPage implements OnInit {
     return await modal.present();
   }
 
+  async mostarInvestigacion() {
+    const modal = await this.modalCtrl.create({
+      component: ModalInvestigacionPage
+    });
 
+    modal.onDidDismiss().then((modalDataResponse) => {
+      if (modalDataResponse !== null) {
+        this.modalDataResponse = modalDataResponse.data;
+      }
+    });
+
+    return await modal.present();
+  }
 
 
 

@@ -36,6 +36,10 @@ const routes: Routes = [
     loadChildren: () => import('./modal-servicios-academicos/modal-servicios-academicos.module').then(m => m.ModalServiciosAcademicosPageModule)
   },
   {
+    path: 'modal-investigacion',
+    loadChildren: () => import('./modal-investigacion/modal-investigacion.module').then(m => m.ModalInvestigacionPageModule)
+  },
+  {
     path: 'modal-programas-academicos',
     loadChildren: () => import('./modal-programas-academicos/modal-programas-academicos.module').then(m => m.ModalProgramasAcademicosPageModule)
   },

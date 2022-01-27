@@ -89,12 +89,20 @@
       </ion-col>
       <ion-col>
         <div class="tablero">
-          <a [href]="linkcontactenos"><img class="iconos" src="assets/icon/9.Contacto.png" alt=""></a>
-          Contáctenos
+          <img class="iconos" src="assets/icon/2.ProgramasAcademicos/0.ProgramasAcademicos.png" alt=""
+            (click)="mostarInvestigacion()">
+          <p *ngIf="modalDataResponse">{{modalDataResponse}}</p>
+          Investigación
         </div>
       </ion-col>
     </ion-row>
     <ion-row>
+      <ion-col>
+        <div class="tablero">
+          <a [href]="linkcontactenos"><img class="iconos" src="assets/icon/9.Contacto.png" alt=""></a>
+          Contáctenos
+        </div>
+      </ion-col>
       <ion-col>
         <div class="tablero">
           <img class="iconos" src="assets/icon/10.Autores.png" alt="" (click)="mostarProduccion()">
