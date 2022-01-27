@@ -19,6 +19,12 @@ export class ModalExtensionPage implements OnInit {
   public linkproyectosdeextension: string;
   public linkconvocatoria: string;
   public linkbolsadeempleo: string;
+  public linkgpe: string;
+  public linkasesoria: string;
+  public linkemprendimiento: string;
+  public linkgraduados: string;
+  public linkintercambios: string;
+  public linkeventos: string;
   public lines = [];
 
   constructor(private modalCtr: ModalController, public activatedRoute: ActivatedRoute, private db: AngularFirestore, private afauth: AngularFireAuth, private router: Router) {
@@ -35,6 +41,12 @@ export class ModalExtensionPage implements OnInit {
       this.linkproyectosdeextension = this.lines[0].ProyectodeExtension;
       this.linkconvocatoria = this.lines[0].Convocatorias;
       this.linkbolsadeempleo = this.lines[0].BolsadeEmpleo;
+      this.linkgpe = this.lines[0].Gpe;
+      this.linkasesoria = this.lines[0].AsesoriaProyectos;
+      this.linkemprendimiento = this.lines[0].Emprendimiento;
+      this.linkgraduados = this.lines[0].Graduados;
+      this.linkintercambios = this.lines[0].Intercambios;
+      this.linkeventos = this.lines[0].EventosExtension;
 
     });
 
