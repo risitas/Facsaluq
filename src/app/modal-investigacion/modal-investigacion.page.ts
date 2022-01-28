@@ -32,14 +32,11 @@ export class ModalInvestigacionPage implements OnInit {
 
       const dts: any = doc.data();
       this.lines.push(dts);
-
       this.linkconvocatorias = this.lines[0].Convocatorias;
       this.linksemilleros = this.lines[0].Semilleros;
       this.linkredesInvestigacion = this.lines[0].RedesInvestigacion;
       this.linkvicerrectoriaInvestigacion = this.lines[0].VicerrectoriaInvestigacion;
       this.linkminCiencia = this.lines[0].MinCiencia;
-
-
     });
 
   }
