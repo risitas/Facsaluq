@@ -32,6 +32,7 @@ export class TableroMandoPage implements OnInit {
   public linkbienestaruniversitario: string;
   public linknormativas: string;
   public linkcontactenos: string;
+  public linkinformesgestion: string;
   public contador: string;
   public contadorU: string;
   public valor: number;
@@ -59,6 +60,7 @@ export class TableroMandoPage implements OnInit {
       this.linkcontactenos = this.lines[0].Contactenos;
       this.linkbienestaruniversitario = this.lines[0].BienestarUniversitario;
       this.linknormativas = this.lines[0].Normativa;
+      this.linkinformesgestion = this.lines[0].InformesGestion
 
     });
 
